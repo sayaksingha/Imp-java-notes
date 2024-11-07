@@ -1,0 +1,906 @@
+For the code below, what should be the name of java file?
+1.
+public class HelloWorld {
+    public static void main(String [] args) {
+        System.out.println("Hello World!");
+    }
+}
+
+A. Hello.java
+B. World.java
+C. HelloWorld.java
+D. helloworld.java
+
+2.
+Does below code compile successfully?
+public class Test {
+    public static void main(String [] args) {
+        System.out.println("Hello");;;;;;;;;
+    }
+}
+A. ye
+B. no
+
+3.
+What is the signature of special main method?
+A. public static void main(String args)
+B. public static void main(String[] a)
+C. public static void main()
+D. private static void main(String[] args)
+
+
+4.
+What will be the result of compiling and executing Test class?
+  java Test good morning everyone
+
+private class Test{ 
+   public static void main(String args[]) { 
+       System.out.println(args[1]);
+   }
+}
+A. compilation error
+B. good
+C. morning
+D. everyone
+
+5.
+Consider below code:
+
+//Guest.java
+class Message {
+    static void main(String [] args) {
+        System.out.println("Welcome " + args[2] + "!");
+    }
+}
+public class Guest {
+    public static void main(String [] args) {
+        Message.main(args);
+    }
+}
+And the commands:
+javac Guest.java
+java Guest Clare Waight Keller
+A. Welcome clare!
+B. Welcome Waight!
+C. Welcome keller!
+D. ArrayIndexOutOfBoundsException is thrown at runtime.
+E. Some other error as main method can't be invoked manually.
+F. Compilation error as main method is not public under class Message.
+
+
+6.
+Consider below code:
+
+//Guest.java
+class Message {
+    public static void main(String [] args) {
+        System.out.println("Welcome " + args[0] + "!");
+    }
+}
+ 
+public class Guest {
+    public static void main(String [] args) {
+        Message.main(args);
+    }
+}
+And the commands:
+javac Guest.java
+java Guest James Gosling
+What is the result?
+A. Welcome James!
+B. Welcome Gosling!
+C. ArrayIndexOutOfBoundsException is thrown at runtime
+D. Some other error as main method can't be invoked manually.
+
+
+7.
+For the class Test, which options, if used to replace /*INSERT*/, will print "Hurrah! I passed..." on to the console? Select 2 options.
+public class Test {
+    /*INSERT*/ {
+        System.out.println("Hurrah! I passed...");
+    }
+}
+
+A. static public void main(String[] args)
+B. public static void main(String[] a)
+C. static public void Main(String[] args)
+D. public void main(String[] args)
+E. protected static void main(String[] args)
+F. public void static main(String[] args)
+
+8.
+Suppose you have created a java file, "MyClass.java". 
+Which of the following commands will compile the java file?
+
+A. javac MyClass
+B. java MyClass
+C. javac MyClass.class
+D. javac MyClass.java
+E. java MyClass.java
+
+9.
+Consider below code: 
+
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("ONE");
+    }    
+    public static void main(Integer[] args) {
+        System.out.println("TWO");
+    }    
+    public static void main(byte [] args) {
+        System.out.println("THREE");
+    }
+}
+What will be the result if Test class is executed by below command?
+java Test 10
+A. TWO
+B. ONE
+C. THREE
+D. Compilation Error
+
+10.
+Below is the code of Test.java file.
+public class Test {
+    /* INSERT */
+}
+Below are the definitions of main method:
+1.
+public static final void main(String... a) {
+    System.out.println("Java Rocks!");
+}
+2.
+public void main(String... args) {
+    System.out.println("Java Rocks!");
+}
+3.
+static void main(String [] args) {
+    System.out.println("Java Rocks!");
+}
+4.
+public static void main(String [] args) {
+    System.out.println("Java Rocks!");
+}
+5.
+public static void main(String args) {
+    System.out.println("Java Rocks!");
+}
+How many definitions of main method can replace /* INSERT */ such that on executing Test class, "Java Rocks!" is printed on to the console?
+A. only one defnition
+B. only two defnition
+C. only three defnition
+D. only four defnition
+E. All five defnition
+
+
+11.
+Given code of Thought.java file:
+public class Thought {
+    /*INSERT*/ {
+        System.out.println("All is well");
+    }
+}
+Which 3 options, if used to replace /*INSERT*/, will compile successfully and on execution will print "All is well" on to the console?
+A. public void static  main(String[] args)
+B. protected static void main(String[] args)
+C. public void main(String... args)
+D. static public void Main(String... args)
+E. static public void main(String[] args)
+F. public static void main(String[] a)
+G. public static Void main(String[] args)
+H. public static void main(String... a)
+
+
+12.
+Consider below code of main.java file:
+public class main { 
+    static String main = "ONE"; 
+
+    public main() {
+        System.out.println("TWO");
+    }    
+    public static void main(String [] args) {
+        main();
+    } 
+    public static void main () {   
+        System.out.println(main);
+    }
+}
+Also consider below statements:
+1. Code doesn't compile
+2. Code compiles successfully
+3. Only ONE will be printed to the console
+4. Only TWO will be printed to the console
+5. Both ONE and TWO will be printed to the console
+
+How many of the above statements is/are true?
+  A. One statement
+  B. Two Statement
+  c. Three Statement
+
+
+13.
+Given code of Test.java file:
+
+public class Test {   
+    public static void main(String[] args){   
+        args[1] = "Day!";
+        System.out.println(args[0] + " " + args[1]);
+    }
+}
+And the commands:
+javac Test.java
+java Test Good
+
+What is the result?
+A. Good
+B. Good Day!
+C. Compilation Error
+D. An Exception is thrown at runtime.
+
+
+14.
+Consider below code of Test.java file:
+public class Test {   
+    public static void main(String[] args){    
+        System.out.println("String");
+    }
+    
+    public static void main(Integer [] args) {
+        System.out.println("Integer");
+    }
+    
+    public static void main(byte [] args) {
+        System.out.println("byte");
+    }
+}
+And the commands:
+javac Test.java
+java test 10
+What is the result?
+A. Integer
+B. String
+C. byte
+D. Compilation error
+E. An Exception is thrown at RunTime
+
+15.
+Consider below code of Test.java file:
+public class Test {   
+    public static void main(String[] args){   
+        System.out.println("Welcome " + args[0] +"!");
+    }
+}
+And the commands:
+javac Test.java
+java Test "James Gosling"  "Bill Joy"
+What is the result?
+A. Welcome James Gosling!
+B. Welcome Bill Joy!
+C. Welcome "James Gosling"!
+D. Welcome "Bill Joy"!
+E. Welcome James!
+F. Welcome Gosling!
+G. Welcome Bill!
+H. Welcome Joy!
+
+16.
+What will be the result of compiling and executing Test class?
+public class Test {   
+    publicstaticvoid main(String[] args){   
+        byte b1 = ( byte ) ( 127 + 21 );    
+        System.out.println(b1);
+    }
+}
+A. 148
+B. Compilation Error
+C. -108
+D. -128
+
+
+17.
+What will be the result of compiling and executing TestStudent class?
+
+//TestStudent.java 
+class Student {
+    String name;int age;boolean result;double height;
+}
+public class TestStudent {   
+    public static void main(String[] args){   
+        Student stud = new Student();
+        System.out.println(stud.name + stud.height + stud.result + stud.age);
+    }
+}
+
+A. null0.0false0
+B. null0false0
+C. null0.0ffalse0
+D. null0.0true0
+
+18.
+Given code: 
+public class Pen {   
+    public static void main(String[] args){   
+        Pen p1 = new Pen(); //Line 1
+        Pen p2 = new Pen(); //Line 2
+        p1 = p2; //Line 3
+        p1 = null; //Line 4
+    }
+}
+When is the Pen object, created at Line 1 eligible for Garbage Collection?
+A. After Line 2
+B. After Line 3
+C. After Line 4
+D. At the end of main method
+
+19.
+How many objects of Pen class are eligible for Garbage Collection at Line 4? 
+class Pen {}
+public class TestPen {   
+    public static void main(String[] args){   
+        new Pen(); //Line 1
+        Pen p = new Pen(); // Line 2
+        change(p); //Line 3
+        System.out.println("About to end."); //Line 4
+    }
+    public static void change(Pen pen) { //Line 5
+        pen = new Pen(); //Line 6
+    }
+}
+A. 0
+B. 1
+C. 2
+D. 3
+
+20.
+What will be the result of compiling and executing Test class?
+public class Test {   
+    char var1 ;double var2;float var3;
+    public static void main(String[] args){   
+        Test obj = new Test();
+        System.out.println(">" + obj.var1);
+        System.out.println(">" + obj.var2);
+        System.out.println(">" + obj.var3);
+    }
+}
+A. > null
+   > 0.0
+   > 0.0
+
+B. >
+   > 0.0
+   > 0.0
+
+C. >
+   >0.0  
+   >0.0f
+
+D. >null
+   >0.0
+   >0.0f
+
+
+21.
+Given the code of Test.java file: 
+class Point {
+    int x;
+    int y;
+    void assign(int x, int y) {
+        x = this.x;
+        this.y = y;
+    }
+    
+    publicString toString(){  
+        return "Point(" + x + ", " + y + ")";
+    }
+}
+ 
+public class Test {   
+    publicstaticvoid main(String[] args){   
+        Point p1 = new Point();
+        p1 . x = 10 ; 
+        p1 . y = 20 ; 
+        Point p2 = new Point();
+        p2.assign(p1.x, p1.y);
+        System.out.println(p1.toString() + ";" + p2.toString());
+    }
+}
+
+What will be the result of compiling and executing Test class?
+ A. Point(10,20); Point(10,20)
+ B. Point(10,20); Point(0,20);
+ C. Point(0,20); Point(0,20);
+ D. Point(0,20); Point(10,20);
+ E. None of the other options
+
+22.
+Consider below code: 
+public class Counter {
+    int count;
+    
+    private static void increment(Counter counter) {
+        counter.count++;
+    }
+    
+    publicstaticvoid main(String[] args){    
+        Counter c1 = new Counter();
+        Counter c2 = c1;
+        Counter c3 = null;
+        c2.count = 1000;
+        increment(c2);
+    }
+}
+On executing Counter class, how many Counter objects are created in the memory?
+
+A. 1
+B. 2
+C. 3
+D. 4
+
+
+23.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        Boolean b1 = new Boolean("tRuE");
+        Boolean b2 = new Boolean("fAlSe");
+        Boolean b3 = new Boolean("abc");
+        Boolean b4 = null;
+        System.out.println(b1 + ":" + b2 + ":" + b3 + ":" + b4);
+    }
+}
+A. falsefalsefalsenull
+B. truefalsefalsenull
+C. falsefalsetruenull
+D. Compilation error
+
+
+24.
+public class MainApp {
+	private static void add(double d1, double d2) {
+		System.out.println("double version: " + (d1 + d2));
+	}
+
+	private static void add(Double d1, Double d2) {
+		System.out.println("Double version: " + (d1 + d2));
+	}
+	public static void main(String[] args) {
+			add(10.0, null);
+	}
+}
+A. CompilationError
+B. Double version: 10.0
+C. double version: 10.0
+D. An exception is thrown at runtime
+
+25.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        Boolean [] arr = new Boolean[2];
+        System.out.println(arr[0] + ":" + arr[1]);
+    }
+}
+A. NullPointerException is thrown at Runtime
+B. true:true
+C. false:false
+D. null: null
+
+26.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        Double [] arr = new Double[2];
+        System.out.println(arr[0] + arr[1]);
+    }
+}
+A. NullPointerException is thrown at Runtime
+B. 0.0
+C. Compilationerror
+D. ClassCastException is thrown at runtime
+
+27.
+What will be the result of compiling and executing Test class?
+public class Test {
+    static Boolean[] arr = new Boolean[1];
+    public static void main(String[] args) {
+        if(arr[0]) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+    }
+}
+A. true
+b. false
+C. Compilation error
+D. NullPointerException is thrown at runtime
+E. ArrayIndexOutOfBoundsException is thrown at runtime
+
+28.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        Boolean b = new Boolean("tRUe");
+        switch(b) {
+            case true:
+                System.out.println("ONE");
+            case false:
+                System.out.println("TWO");
+            default: 
+                System.out.println("THREE");
+        }
+    }
+}
+A. ONE
+   TWO
+   THREE
+
+B. TWO
+   THREE
+
+C. THREE
+
+D. None of the above options
+
+29.
+Consider below code: 
+public class Test {
+    public static void main(String[] args) {
+        char c = 'Z';
+        long l = 100_00l;
+        int i = 9_2;
+        float f = 2.02f; 
+        double d = 10_0.35d;
+
+        l = c + i;
+        f = c * l * i * f;
+        f = l + i + c;
+        i = (int)d;
+        f = (long)d;
+    }
+}
+Does above code compile successfully?
+A. Yes
+B. No
+
+30.
+What will be the result of compiling and executing Test class? 
+public class Test {
+    public static void main(String[] args) {
+        System.out.println(new Boolean("ture"));
+    }
+}
+A. true
+B. false
+C. An Exception is thrown at runtime
+D. Compilation Error.
+
+31.
+What will be the result of compiling and executing Test class?
+
+public class Test {
+    public static void main(String[] args) {
+        m(1);
+    }
+    
+    private static void m(Object obj) {
+        System.out.println("Object version");
+    }
+    
+    private static void m(Number obj) {
+        System.out.println("Number version");
+    }
+    
+    private static void m(Double obj) {
+        System.out.println("Double version");
+    }
+}
+
+A. Compilation error
+B. Object version
+C. Number version
+D. Double version
+
+32.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        extractInt(2.7);
+        extractInt(2);
+    }
+    private static void extractInt(Double obj) {
+        System.out.println(obj.intValue());
+    }
+}
+
+A. 2
+   2
+
+B. 3
+   2
+
+C. Compilation error in main method
+D. Compilation error in extractInt method
+E. An exception is thrown at runtime
+
+
+33.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        char c1 = 'a'; //ASCII code of 'a' is 97
+        int i1 = c1; //Line n1
+        System.out.println(i1); //Line n2
+    }
+}
+What is the result of compiling and executing Test class?
+A. a
+B. 97
+C. Line n1 causes compilation failure
+D. Line n2 causes runtime error.
+
+34.
+Consider below statements:
+1. int x = 5____0;
+2. int y = ____50;
+3. int z = 50____;
+4. float f = 123.76_86f;
+5. double d = 1_2_3_4;
+
+How many statements are legal?
+A. One statement only
+B. Two statement only
+C. Three statement only
+D. Four statement only
+E. All 5 statement only.
+
+35.
+Given code of Test.java file:
+public class Test {
+	public static void main(String[] args) {
+          byte b1 = 10; //Line n1
+	  int i1 = b1; //Line n2
+          byte b2 = i1; //Line n3
+          System.out.println(b1 + i1 + b2);
+    }
+}
+What is the result of compiling and executing Test class?
+A. Line n1 causes compilation  error
+B. Line n2 causes compilation error.
+C. Line n3 causes compilation error.
+D. 30 printed on to console.
+
+36.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        boolean b1 = 0;
+        boolean b2 = 1;
+        System.out.println(b1 + b2);
+    }
+}
+What is the result of compiling and executing Test class?
+A. 0
+B. 1
+C. true
+D. false
+E. compilation error
+
+37.
+Range of short data type is from -32768 to 32767
+Which of the following code segments, written inside main method will compile successfully?
+ Select 3 options.
+A. short s1=10
+B. short s2=32768
+
+c. final int i3=10
+   short s3=i3
+
+D. final int i4=40000
+   short s4=i4
+
+E. final int i5=10
+   short s5= i5+100
+
+F. final int m=25000
+   final int n=25000
+   short s6= m+n
+
+G. int i7=10
+   short s7=i7
+
+38.For the given code what is the output?
+   int x=100;//103
+   int a=x++;//100
+   int b= ++x;//102
+   int c= x++;//102
+   int d= (a<b)? (a<c) ? a: (b<c)? b: c :x;
+   System.out.println(d);
+
+A. 100
+B. 101
+C. 102
+D. 103
+E. compilation fails
+
+
+39.Given
+int i=10;
+int j=20;
+int k= (j+=i)/5;
+System.out.println(i+":"+j+":"+k);
+
+A.10:30:6
+B.10:22:22
+C.10:22:20
+D.10:22:6
+
+40.
+class Alpha {
+	int ns;static int s;
+	Alpha(int ns) {
+		if (s < ns) {
+			s = ns;
+			this.ns = ns;
+	        }
+	}
+	void doPrint() {System.out.println("ns = " + ns + " s=" + s);}
+}
+public class DemoApp {
+	public static void main(String[] args) {
+		Alpha a1 = new Alpha(50);
+		Alpha a2 = new Alpha(125);
+		Alpha a3 = new Alpha(100);
+		a1.doPrint();
+		a2.doPrint();
+		a3.doPrint();
+	}
+}
+Options 
+A. ns =50   s=125 
+   ns =125  s=125 
+   ns =100  s=125
+
+B. ns =50   s=125 
+   ns =125  s=125 
+   ns =0    s=125
+
+C. ns =50   s=50
+   ns =125  s=125
+   ns =100  s=100
+ 
+D. ns =50   s=50 
+   ns =125  s=125
+   ns =0    s=125
+
+41.
+public class DemoApp {
+	static int count = 0;int i = 0;
+	public void changeCount() {
+		while (i < 5) {
+			i++;
+			count++;
+		}
+	}
+	public static void main(String[] args) {
+		DemoApp demoApp1 = new DemoApp();
+		DemoApp demoApp2 = new DemoApp();
+		demoApp1.changeCount();
+		demoApp2.changeCount();
+		System.out.println(DemoApp.count + ":" + DemoApp.count);
+	}
+}
+What is the output?
+A. 10: 10
+B. 5: 5
+C. 5: 10
+D. Compilation fails
+
+42.
+public class DemoApp{
+	public static void main(String... args){
+		if(arg[0].equals("hello") ? false : true)
+			System.out.println("success");
+		else
+			System.out.println("failure");
+	}
+}
+What is the output if the program is executed in the following style?
+ DemoApp hello
+
+A. success
+B. failure
+C. CE
+D. ArrayIndexOutOfBoundsException
+E. StringIndexOutOfBoundsException
+
+43.
+   String planets[] = {"mercury","venus","earth","mars"};
+   System.out.println(planets.length);
+   System.out.println(planets[1].length());
+
+What is the output?
+A. 3
+   4
+B. 4
+   5
+C. 4
+   4
+D. CE
+E. NullPointerException
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+
+
+
+
+
+
+
+
+
+
+ 

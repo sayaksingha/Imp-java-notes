@@ -1,0 +1,212 @@
+Consider the following class
+public class Test {
+    public static void main(String[] args) {
+        boolean b1 = 0;
+        boolean b2 = 1;
+        System.out.println(b1 + b2);
+    }
+}
+
+A. 0
+B. 1
+C. true
+D. false
+E. CompilationError
+
+2.
+Consider below code of Wall.java file:
+public class Wall {
+    public static void main(String args[]) {
+        double area = 5.7;
+        String color;
+        if (area < 7)
+            color = "BLUE";
+        
+        System.out.println(color);
+    }
+}
+What will be the result of compiling and executing Wall class?
+A. BLUE
+B. null
+C. Exception is thrown at runtime
+D. CompilationError
+
+3.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        double price = 90000;
+        String model;
+        if(price > 100000) {
+            model = "Tesla Model X";
+        } else if(price <= 100000) {
+            model = "Tesla Model S";
+        }
+        System.out.println(model);
+    }
+}
+What will be the result of compiling and executing Test class?
+A. Tesla Model X
+B. Tesla Model S
+C. null
+D. CompilationError
+
+4.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        short [] args = new short[]{50, 50};
+        args[0] = 5;
+        args[1] = 10;
+        System.out.println("[" + args[0] + ", " + args[1] + "]");
+    }
+}
+What will be the result of compiling and executing Test class?
+A. CompilationError
+B. Exception is thrown at Runtime
+C. [50,50]
+D. [5,10]
+
+5.
+Given code of Test.java file:
+public class Test {
+    static String msg; //Line 2
+    public static void main(String[] args) {
+        String msg; //Line 4
+        if(args.length > 0) {
+            msg = args[0]; //Line 6
+        }
+        System.out.println(msg); //Line 8
+    }
+}
+What will be the result of compiling and executing Test class?
+A. null
+B. Line 2 causes compilation Error
+C. Line 3 causes compilation Error
+D. An Exception is thrown at Runtime
+E. Line 8 causes compilation Error
+
+6.
+public class Test {
+    static String str = "KEEP IT "; //Line n1
+    public static void main(String[] args) {
+        String str = str + "SIMPLE"; //Line n2
+        System.out.println(str);
+    }
+}
+
+A. Line n1 causes compilation error
+B. Line n2 causes compilation error
+C. KEEP IT 
+D. KEEP IT SIMPLE
+E. SIMPLE
+
+7.
+Given code of Test.java file:
+public class Test {
+    static String var = "FRIENDS"; //Line n1
+    public static void main(String[] args) {
+        int var = (var = Test.var.length()); //Line n2
+        System.out.println(var); //Line n3
+    }
+}
+What will be the result of compiling and executing Test class?
+A. Line n1 causes compilation error
+B. Line n2 causes compilation error
+C. Line n3 causes compilation error
+D. It compiles succesfully and prints FRIENDS on the console
+E. It compiles succesfully and prints 7 on the console
+
+8.
+public class Test {
+    public static void main(String[] args) {
+        String s1 = "OCP";
+        String s2 = "ocp";
+        System.out.println(/*INSERT*/);
+    }
+}
+Which of the following options, if used to replace /*INSERT*/, will compile successfully and on execution will print true on to the console?
+
+Select 2 options.
+A. s1.equals(s2)
+B. s1.equalsIgnoreCase(s2)
+C. s2.equals(s2.toLower());
+D. s1.equals(s2.toUpper());
+E. s1.length() == s2.length()
+F. s1.contentEquals(s2)
+
+9.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        String fName = "Joshua";
+        String lName = "Bloch";
+        System.out.println(fName = lName);
+    }
+}
+What will be the result of compiling and executing Test class?
+A. CompilationError
+B. false
+C. true
+D. None of the above
+
+10.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        String str = "Think"; //Line n3
+        change(str); //Line n4
+        System.out.println(str); //Line n5
+    }
+    
+    private static void change(String s) {
+        s.concat("_Twice"); //Line n9
+    }
+}
+What will be the result of compiling and executing Test class?
+A. Think
+B. _Twice
+C. Think_Twice
+D. None of the above
+
+11.
+public class Test {
+    public static void main(String [] args) {
+        String text = "ONE ";
+        System.out.println(text.concat(text.concat("ELEVEN ")).trim());
+    }
+}
+What will be the result of compiling and executing Test class?
+A. ONE ELEVEN
+B. ONE ONE ELEVEN
+C. ONE ELEVEN ONE ELEVEN
+D. ONE ELEVEN ONE
+
+12.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        m1(null);
+    }
+    
+    static void m1(CharSequence s) {
+        System.out.println("CharSequence");
+    }
+    
+    static void m1(String s) {
+        System.out.println("String");
+    }
+    
+    static void m1(Object s) {
+        System.out.println("Object");
+    }
+}
+What will be the result of compiling and executing Test class?
+A. CompilationError
+B. CharSequence
+C. String
+D. Object
+
+
+
+

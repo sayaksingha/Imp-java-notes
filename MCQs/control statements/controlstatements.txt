@@ -1,0 +1,394 @@
+Boolean b1 = true;
+boolean b2 = false;
+boolean b3 = true;
+if ((b1 & b2) | (b2 & b3) & b3)
+    System.out.print("alpha ");
+if ((b1 = false) | (b1 & b3) | (b1 | b2))
+    System.out.print("beta ");
+
+What is the result?
+A. beta
+B. alpha
+C. alpha beta
+D. Compilation fails.
+E. No output is produced.
+F. An exception is thrown at runtime.
+
+
+Given:
+class Feline {
+public static void main(String[] args) {
+Long x = 42L;
+Long y = 44L;
+System.out.print(" " + 7 + 2 + " ");
+System.out.print(foo() + x + 5 + " ");
+System.out.println(x + y + foo());
+}
+static String foo() { return "foo"; }
+}
+What is the result?
+A. 9 foo47 86foo
+B. 9 foo47 4244foo
+C. 9 foo425 86foo
+D. 9 foo425 4244foo
+E. 72 foo47 86foo
+F. 72 foo47 4244foo
+G. 72 foo425 86foo
+H. 72 foo425 4244foo
+I. Compilation fails.
+
+
+Given:
+1. class Maybe {
+2. public static void main(String[] args) {
+3. boolean b1 = true;
+4. boolean b2 = false;
+5. System.out.print(!false ^ false);
+6. System.out.print(" " + (!b1 & (b2 = true)));
+7. System.out.println(" " + (b2 ^ b1));
+8. }
+9. }
+Which are true?
+A. Line 5 produces true.
+B. Line 5 produces false.
+C. Line 6 produces true.
+D. Line 6 produces false.
+E. Line 7 produces true.
+F. Line 7 produces false.
+
+
+Given.
+class Sixties {
+public static void main(String[] args) {
+int x = 5;
+int y = 7;
+System.out.print(((y * 2) % x));
+System.out.print(" " + (y % x));
+}
+}
+What is the result?
+A. 1 1
+B. 1 2
+C. 2 1
+D. 2 2
+E. 4 1
+F. 4 2
+G. Compilation fails.
+H. An exception is thrown at runtime.
+
+
+Given:
+class Alien {
+String invade(short ships) { return "a few"; }
+String invade(short... ships) { return "many"; }
+}
+class Defender {
+public static void main(String [] args) {
+System.out.println(new Alien().invade(7));
+} }
+What is the result?
+A. many
+B. a few
+C. Compilation fails.
+D. The output is not predictable.
+E. An exception is thrown at runtime.
+
+Given
+ class Dims {
+2. public static void main(String[] args) {
+3. int[][] a = {{1,2,}, {3,4}};
+4. int[] b = (int[]) a[1];
+5. Object o1 = a;
+6. int[][] a2 = (int[][]) o1;
+7. System.out.println(b[1]);
+8. } }
+What is the result?
+A. 2
+B. 4
+C. An exception is thrown at runtime
+D. Compilation fails due to an error on line 4.
+E. Compilation fails due to an error on line 5.
+F. Compilation fails due to an error on line 6.
+
+
+Given
+class Eggs {
+int doX(Long x, Long y) { return 1; }
+int doX(long... x) { return 2; }
+int doX(Integer x, Integer y) { return 3; }
+int doX(Number n, Number m) { return 4; }
+public static void main(String[] args) {
+new Eggs().go();
+}
+void go() {
+short s = 7;
+System.out.print(doX(s,s) + " ");
+System.out.println(doX(7,7));
+} }
+What is the result?
+A. 1 1
+B. 2 1
+C. 3 1
+D. 4 1
+E. 2 3
+F. 3 3
+G. 4 3
+
+Given
+1. class Zippy {
+2. String[] x;
+3. int[] a [] = {{1,2}, {1}};
+4. Object c = new long[4];
+5. Object[] d = x;
+6. }
+What is the result?
+A. Compilation succeeds.
+B. Compilation fails due only to an error on line 3.
+C. Compilation fails due only to an error on line 4.
+D. Compilation fails due only to an error on line 5.
+E. Compilation fails due to errors on lines 3 and 5.
+F. Compilation fails due to errors on lines 3, 4, and 5.
+
+
+Given:
+class Fizz {
+int x = 5;
+public static void main(String[] args) {
+final Fizz f1 = new Fizz();
+Fizz f2 = new Fizz();
+Fizz f3 = FizzSwitch(f1,f2);
+System.out.println((f1 == f3) + " " + (f1.x == f3.x));
+}
+static Fizz FizzSwitch(Fizz x, Fizz y) {
+final Fizz z = x;
+z.x = 6;
+return z;
+} }
+What is the result?
+A. true true 
+B. false true 
+C. true false
+D. false false 
+E. Compilation fails.  
+F. An exception is thrown at runtime.
+
+Given:
+class Knowing {
+static final long tooth = 343L;
+static long doIt(long tooth) {
+System.out.print(++tooth + " ");
+return ++tooth;
+}
+public static void main(String[] args) {
+System.out.print(tooth + " ");
+final long tooth = 340L;
+new Knowing().doIt(tooth);
+System.out.println(tooth);
+} }
+What is the result?  
+A. 343 340 340  
+B. 343 340 342 
+C. 343 341 342
+D. 343 341 340 
+E. 343 341 343 
+F. Compilation fails.
+G. An exception is thrown at runtime.
+
+Given.
+class Foozit {
+public static void main(String[] args) {
+Integer x = 0;
+Integer y = 0;
+for(Short z = 0; z < 5; z++)
+if((++x > 2) || (++y > 2))
+x++;
+System.out.println(x + " " + y);
+} }
+What is the result?
+A. 5 1   
+B. 5 2   
+C. 5 3   
+D. 8 1
+E. 8 2   
+F. 8 3  
+G. 10 2  
+H. 10 3
+
+Given:
+class Fork {
+public static void main(String[] args) {
+if(args.length == 1 | args[1].equals("test")) {
+System.out.println("test case");
+} else {
+System.out.println("production " + args[0]);
+} } }
+And the command-line invocation:
+java Fork live2
+What is the result?
+A. test case
+B. production
+C. test case live2
+D. Compilation fails.
+E. An exception is thrown at runtime.
+
+Given:
+1. class Comp2 {
+2. public static void main(String[] args) {
+3. float f1 = 2.3f;
+4. float[][] f2 = {{42.0f}, {1.7f, 2.3f}, {2.6f, 2.7f}};
+5. float[] f3 = {2.7f};
+6. Long x = 42L;
+7. // insert code here
+8. System.out.println("true");
+9. }
+10. }
+And the following five code fragments:
+F1. if(f1 == f2)
+F2. if(f1 == f2[2][1])
+F3. if(x == f2[0][0])
+F4. if(f1 == f2[1,1])
+F5. if(f3 == f2[2])
+What is true?
+A. One of them will compile, only one will be true.
+B. Two of them will compile, only one will be true.
+C. Two of them will compile, two will be true.
+D. Three of them will compile, only one will be true.
+E. Three of them will compile, exactly two will be true.
+F. Three of them will compile, exactly three will be true.
+
+Given
+42. public class ClassA {
+43. public int getValue() {
+44.int value=0;
+45. boolean setting = true;
+46. String title=”Hello”;
+47. if (value || (setting && title == “Hello”)) { return 1; }
+48. if (value == 1 & title.equals(”Hello”)) { return 2; }
+49. }
+50. }
+And:
+70. ClassA a = new ClassA();
+71. a.getValue();
+What is the result?
+A. 1
+B. 2
+C. Compilation fails.
+D. The code runs with no output.
+E. An exception is thrown at runtime.
+
+
+Given
+class Hexy {
+public static void main(String[] args) {
+Integer i = 42;
+String s = (i<40)?"life":(i>50)?"universe":"everything";
+System.out.println(s);
+} }
+What is the result?
+A. null
+B. life
+C. universe
+D. everything
+E. Compilation fails.
+F. An exception is thrown at runtime.
+
+Given
+int a= 8,b=15,c=4;
+System.out.println( 2 * ((a%5) * (4+(b-3)/(c+2))));
+What is the output?
+A. 30
+B. 36
+C. 32
+D. 35
+
+Given
+class TestOR {
+2. public static void main(String[] args) {
+3. if ((isItSmall(3)) || (isItSmall(7))) {
+4. 	System.out.println("Result is true");
+5. }
+6. if ((isItSmall(6)) || (isItSmall(9))) {
+7. 	System.out.println("Result is true");
+8. }
+9. }
+10.
+11. public static boolean isItSmall(int i) {
+12. 	if (i < 5) {
+13. 		System.out.println("i < 5");
+14. 		return true;
+15. 	} else {
+16. 		System.out.println("i >= 5");
+17. 		return false;
+18. 	}
+19. 	}
+20. }
+What is the result?
+A. Compilation Error at line 3
+B. Compilation Error at line 6
+C. i<5
+   Result is true
+D. i<5
+   Result is true
+   i>=5
+   Result is true
+E. i<5
+   Result is true
+   i>=5
+   i>=5
+   Result is true
+F. i<5
+   Result is true
+   i>=5
+   i>=5
+
+Given
+3. public class Spock {
+4. public static void main(String[] args) {
+5. 	int mask = 0;
+6. 	int count = 0;
+7. 	if( ((5<7) || (++count < 10)) | mask++ < 10 ) mask = mask + 1;
+8. 	if( (6 > 8) ^ false) mask = mask + 10;
+9. 	if(!(mask > 1) &&  ++count > 1) mask = mask + 100;
+10. 	System.out.println(mask + " " + count);
+11.   }
+12. }
+
+Which two are true about the value of mask and the value of count at line 10?
+(Choose two.)
+A. mask is 0
+B. mask is 1
+C. mask is 2
+D. mask is 10
+E. mask is greater than 10
+F. count is 0
+G. count is greater than 0
+
+Given
+class Feline {
+	public static void main(String[] args) {
+		Long x = 42L;
+		Long y = 44L;
+		System.out.print(" " + 7 + 2 + " ");
+		System.out.print(foo() + x + 5 + " ");
+		System.out.println(x + y + foo());
+       }
+      static String foo() { return "foo"; }
+}
+What is the result?
+A. 9 foo47 86foo
+B. 9 foo47 4244foo
+C. 9 foo425 86foo
+D. 9 foo425 4244foo
+E. 72 foo47 86foo
+F. 72 foo47 4244foo
+G. 72 foo425 86foo
+H. 72 foo425 4244foo
+   
+   
+
+
+
+
+
+
+

@@ -1,0 +1,1795 @@
+What will be the result of compiling and executing DivModTest class? 
+public class DivModTest {
+    public static void main(String[] args) {
+        System.out.println( 23 / 2.0 );
+        System.out.println( 23 % 2.0 );
+    }
+}
+
+A. 11
+    1
+B. 11.5
+   1.0
+c. 11.0
+   1.0
+D. 11.5
+   0.0
+
+2.
+What will be the result of compiling and executing Test class? 
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("Hello" + 1 + 2 + 3 + 4);
+    }
+}
+A. Hello10
+B. Hello19
+C. Hello1234
+D. Hello10
+
+3.
+What will be the result of compiling and executing Test class? 
+public class Test {
+    public static void main(String[] args) {
+        System.out.println(1 + 2 + 3 + 4 + "Hello");
+    }
+}
+A. 1234Hello
+B. 10Hello
+C. 64Hello
+D. 10 Hello
+
+4.What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("Output is: " + 10 != 5);
+    }
+}
+A. Output is : true
+B. Output is : false
+C. Compilation error
+D. Output is : 10 !=5
+
+5.What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("Output is: " + (10 != 5));
+    }
+}
+A. Output is : true
+B. Output is : false
+C. Compilation error
+D. Output is : 10 !=5
+
+6.What will be the result of compiling and executing Bonus class? 
+public class Bonus {
+    public static void main(String[] args) {
+        int $ = 80000;
+        String msg = ($ >= 50000) ? "Good bonus" : "Average bonus";
+        System.out.println(msg);
+    }
+}
+A. Good bonus
+B. Average bonus
+C. compilation error
+
+7.
+What will be the result of compiling and executing Test class?
+ 
+public class Test {
+    public static void main(String[] args) {
+        int a = 20;
+        int var = --a * a++ + a-- - --a;
+        System.out.println("a = " + a);
+        System.out.println("var = " + var);
+    }
+}
+A. a =25
+  var=363
+B. a= 363
+  var=363
+C. a=18
+  var=363
+D. compilation error
+
+8.
+What will be the result of compiling and executing Test class? 
+public class Test {
+    public static void main(String[] args) {
+        int a = 7;
+        boolean res = a++ == 7 && ++a == 9 || a++ == 9;
+        System.out.println("a = " + a);
+        System.out.println("res = " + res);
+    }
+}
+A. a=10
+   res=true
+B. a=9
+   res=true
+C. a=10
+   res=false
+D. compilation error
+
+9.
+What will be the result of compiling and executing the Test class?
+public class Test {
+    public static void main(String[] args) {
+        int grade = 75;
+        if(grade > 60)
+            System.out.println("Congratulations");
+            System.out.println("You passed");
+        else
+            System.out.println("You failed");
+    }
+}
+
+A. Congratulations
+B. Congratulations
+   You passed
+C. You failed
+D. copmilation error
+
+
+10.
+What will be the result of compiling and executing the Test class?
+
+public class Test {
+    public static void main(String[] args) {
+        int grade = 60;
+        if(grade = 60)
+            System.out.println("You passed...");
+        else
+            System.out.println("You failed...");
+    }
+}
+A. You passed...
+B. You failed...
+C. compilation error
+D. Produces not output
+
+11.
+What will be the output of compiling and executing the Test class?
+public class Test {
+    public static void main(String[] args) {
+        int x = 2;
+        switch (x) {
+            default:
+                System.out.println("Still no idea what x is");
+            case 1:
+                System.out.println("x is equal to 1");
+                break;
+            case 2:
+                System.out.println("x is equal to 2");
+                break;
+            case 3: 
+                System.out.println("x is equal to 3");
+                break;
+        }
+    }
+}
+A. x is equal to 2
+B. Compilation error
+C. Still no idea what x is 
+D. Produces nooutput
+
+
+12.
+What will be the output of compiling and executing the Test class? 
+public class Test {
+    public static void main(String[] args) {
+        int a = 5;
+        int x = 10;
+        switch(x) {
+            case 10:
+                a *= 2;
+            case 20:
+                a *= 3;
+            case 30:
+                a *= 4;
+        }
+        System.out.println(a);
+    }
+}
+A. 5
+B. 10
+C. 30
+D. 120
+
+
+13.
+  Predict the following output for the given code
+public class TestApp{
+	public static void main(String... args){
+			String[] arr[] ={{"%","***"},{"!!!!","@@@@@","######"}};
+
+			for(String str[] : arr){
+				for(String s:str)
+				{
+					System.out.println(s);
+					if(s.length()==4)
+						break;
+				}
+				break;
+			}
+	}
+}
+A. Compile Time Error
+B. StringIndexOutOfBoundsException
+C. %
+   ***
+D. %
+   ***
+   ######
+E. ArrayIndexOutOfBoundsException
+E. None of the above
+
+
+14.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int score = 60;
+        switch (score) {
+            default:
+                System.out.println("Not a valid score");
+            case score < 70:
+                System.out.println("Failed");
+                break;
+            case score >= 70:
+                System.out.println("Passed");
+                break;
+        }
+    }
+}
+A. Compilation Error
+B. Failed
+C. Not a valid score
+   Failed
+D. Passed
+
+15.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        byte var = 100;
+        switch(var) {
+            case 100:
+                System.out.println("var is 100");
+                break;
+            case 200:
+                System.out.println("var is 200");
+                break;
+            default:
+                System.out.println("In default");
+        }
+    }
+}
+A. var is 100
+B. var is 200
+C. In default
+D. CompileTime error.
+
+16.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        String fruit = "mango";
+        switch (fruit) {
+            case "Apple":
+                System.out.println("APPLE");
+            case "Mango":
+                System.out.println("MANGO");
+            case "Banana":
+                System.out.println("BANANA");
+                break;
+            default:
+                System.out.println("ANY FRUIT WILL DO");
+        }
+    }
+}
+A. MANGO
+B. ANY FRUIT WILL DO
+C. MANGO
+   BANNANA
+D. MANGO
+   ANY FRUIT WILL DO
+E. MANGO
+   BANNANA
+   ANY FRUIT WILL DO
+
+17.What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        String fruit = "mango";
+        switch (fruit) {
+            default:
+                System.out.println("ANY FRUIT WILL DO");
+            case "Apple":
+                System.out.println("APPLE");
+            case "Mango":
+                System.out.println("MANGO");
+            case "Banana":
+                System.out.println("BANANA");
+                break;
+        }
+    }
+}
+A. ANY FRUIT WILL DO
+B. MANGO
+C. MANGO
+   BANNANA
+D. ANY FRUIT WILL DO
+   APPLE
+   MANGO
+   BANNANA
+
+18.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        String fruit = new String(new char[] {'M', 'a', 'n', 'g', 'o'});
+        switch (fruit) {
+            default:
+                System.out.println("ANY FRUIT WILL DO");
+            case "Apple":
+                System.out.println("APPLE");
+            case "Mango":
+                System.out.println("MANGO");
+            case "Banana":
+                System.out.println("BANANA");
+                break;
+        }
+    }
+}
+
+A. ANY FRUIT WILL DO
+B. MANGO
+C. MANGO
+   BANANA
+D. ANY FRUIT WILL DO
+   APPLE
+   MANGO
+   BANANA
+
+
+19.
+For the class Test, which options, if used to replace /*INSERT*/, will print TEN on to the console? Select 4 options. 
+public class Test {
+    public static void main(String[] args) {
+        /*INSERT*/
+        switch(var) {
+            case 10:
+                System.out.println("TEN");
+                break;
+            default:
+                System.out.println("DEFAULT");
+        }
+    }
+}
+A. byte var=10
+B. long var=10
+C. Short var=10
+D. Integer var=10
+E. char var=10
+F. double var=10
+
+20.
+For the class Test, which options, if used to replace /*INSERT*/, will print "Lucky no. 7" on to the console? Select 3 options.
+public class Test {
+    public static void main(String[] args) {
+        /*INSERT*/
+        switch(var) {
+            case 7:
+                System.out.println("Lucky no. 7");
+                break;
+            default:
+                System.out.println("DEFAULT");
+        }
+    }
+}
+A. char var='7';
+B. char var=7;
+C. Integer var=7;
+D. Character var='7'
+E. Character var=7;
+
+21.
+For the class Test, which option, if used to replace /*INSERT*/, will print "Lucky no. 7" on to the console?
+public class Test {
+    public static void main(String[] args) {
+        /*INSERT*/
+        switch(var) {
+            case '7':
+                System.out.println("Lucky no. 7");
+                break;
+            default:
+                System.out.println("DEFAULT");
+        }
+    }
+}
+A. int var=7
+B. Integer var=7
+C. int var='7'
+D. None of the above
+
+22.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int i = 5;
+        if(i++ < 6) {
+            System.out.println(i++);
+        }
+    }
+}
+A. 5
+B. 6
+C. 7
+D. Nothing printed on the console
+
+23.
+Consider below code:
+//Test.java
+public class Test {
+    private static boolean flag = !true;
+    
+    public static void main(String [] args) {
+        System.out.println(!flag ? args[0] : args[1]);
+    }
+}
+What will be the result of compiling and executing Test class using below commands?
+javac Test.java
+java Test AM PM
+
+A. AM
+B. PM
+C. ExceptionInitalizerError while loading the .class file
+D. CompilationError
+
+24.
+What will be the result of compiling and executing Test class? 
+public class Test {
+    public static void main(String [] args) {
+        int a = 100;
+        System.out.println(-a++);
+    }
+}
+A. CompilationError
+B. -100
+C. -101
+D. 99
+E. -99
+
+25.
+What will be the result of compiling and executing Test class? 
+public class Test {
+    public static void main(String [] args) {
+        int a = 2;
+        boolean res = false;
+        res = a++ == 2 || --a == 2 && --a == 2;
+        System.out.println(a);
+    }
+}
+A. 2
+B. 3
+C. 1
+D. CompilationError
+
+26.
+What will be the result of compiling and executing Test class? 
+public class Test {
+    public static void main(String [] args) {
+        int a = 3;
+        System.out.println(a++ == 3 || --a == 3 && --a == 3);
+    }
+}
+A. true
+B. false
+C. True
+D. False
+E. 3
+F. 4
+G. CompilationError
+
+27.
+What will be the result of compiling and executing Test class? 
+public class Test {
+    public static void main(String [] args) {
+        int a = 3;
+        m(++a, a++);
+        System.out.println(a);
+    }
+    private static void m(int i, int j) {
+        i++;
+        j--;
+    }
+}
+A. 4
+B. 5
+C. 6
+D. 3
+
+28.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String [] args) {
+        boolean flag = false;
+        System.out.println((flag = true) | (flag = false) || (flag = true));
+        System.out.println(flag);
+    }
+}
+What is the result of compiling and executing Test class?
+A. true
+   false
+B. false
+   true
+C. true
+   true
+D. false
+   false
+E. CompilationError
+
+29.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String [] args) {
+        boolean status = true;
+        System.out.println(status = false || status = true | status = false);
+        System.out.println(status);
+    }
+}
+What is the result of compiling and executing Test class?
+A. true
+   false
+B. false
+   true
+C. true
+   true
+D. false
+   false
+E. CompilationError
+
+30.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String [] args) {
+        int a = 3;
+        int b = 5;
+        int c = 7;
+        int d = 9;
+        boolean res = --a + --b < 1 && c++ + d++ > 1;
+        System.out.printf("a= "+a+",b= "+b+",c= "+c+",d="+d+",res="+res);
+    }
+}
+A. a=2,b=4,c=7,d=9,res=false
+B. a=2,b=4,c=8,d=10,res=false
+C. a=2,b=4,c=7,d=9,res=true
+D. a=2,b=4,c=8,d=10,res=true
+E. a=3,b=5,c=8,d=10,res=false
+F. a=3,b=5,c=8,d=10,res=true
+
+
+31.
+Consider below code snippet:
+int i = 10;
+System.out.println(i > 3 != false);
+
+A. CompilationError
+B. true
+C. false
+D. null
+
+32.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String [] args) {
+        boolean flag1 = true;
+        boolean flag2 = false;
+        boolean flag3 = true;
+        boolean flag4 = false;
+        System.out.println(!flag1 == flag2 != flag3 == !flag4); //Line n1
+        System.out.println(flag1 = flag2 != flag3 == !flag4); //Line n2
+    }
+}
+What will be the result of compiling and executing Test class?
+A. Line n1 cause compilation error
+B. Line n2 causes compilatione error
+C. true
+   true
+D. true
+   false
+E. false
+   true
+F. false
+   false
+
+
+33.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String [] args) {
+        int num = 10;
+        if(num++ == num++) {
+            System.out.println("EQUAL " + num);
+        } else {
+            System.out.println("NOT EQUAL " + num);
+        }
+    }
+}
+
+A. EQUAL 12
+B. EQUAL 11
+C. NOT EQUAL 12
+D. NOT EQUAL 11
+
+
+34.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int val = 25;
+        if(val++ < 26) {
+            System.out.println(val++);
+        }
+    }
+}
+A. 27
+B. 25
+C. 26
+D. Nothing printed on the console
+
+35.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        int score = 30; // Line n1
+        char grade = 'F'; // Line n2
+        if (50 <= score < 60) // Line n3
+            grade = 'D';
+        else if (60 <= score < 70) // Line n4
+            grade = 'C';
+        else if (70 <= score < 80) // Line n5
+            grade = 'B';
+        else if (score >= 80)
+            grade = 'A';
+        System.out.println(grade);
+    }
+}
+
+A. Compilation error
+B. A
+C. B
+D. C
+D. F
+
+36.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        int x = 10; //Line n1
+        if (false)
+            System.out.println(x); //Line n2
+        System.out.println("HELLO"); //Line n3
+    }
+}
+What is the result of compiling and executing Test class?
+
+A. Compilation error at Line n1
+B. Compilation error at Line n2
+C. Compilation error at Line n3
+D. HELLO
+E. 10 
+   HELLO
+
+37.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        String msg = "Hello";
+        boolean [] flag = new boolean[1];
+        if(flag[0]) {
+            msg = "Welcome";
+        }
+        System.out.println(msg);
+    }
+}
+A. Hello
+B. Welcome
+C. ArrayIndexOutOfBoundsException
+D. NullPointerException
+
+38.
+ Which of the following array declarations and initializations is NOT legal?
+  A. char[] arr[] = new char[5][];
+  B. int[] arr={1,2,3,4,5};
+  C. int[] arr3= new int[3]{10,20,30};
+  D. byte[] val=new byte[10];
+
+
+39.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        String [] arr = new String[7];
+        System.out.println(arr);
+    }
+}
+A. NullPointerException
+B. CompilationError
+C. null
+D. Some String containing @ symbol.
+
+40.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        char [][] arr = {
+                {'A', 'B', 'C'},
+                {'D', 'E', 'F'},
+                {'G', 'H', 'I'}
+        };
+        
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][1]);
+            }
+            System.out.println();
+        }
+    }
+}
+A. ABC
+   DEF
+   GHI
+B. BBB
+   EEE
+   HHH
+C. AAA
+   DDD
+   GGG
+D. CCC
+   FFF
+   III
+
+41.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int [] arr1 = {5, 10, 15};
+        int [] arr2 = {'A', 'B'};
+        arr1 = arr2;
+        System.out.println(arr1.length + arr2.length);
+    }
+}
+A. Compilation Error
+B. An Exeption is thrown at runtime
+C. 0
+D. 4
+E. 6
+F. 5
+
+42.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int [] arr1 = {1, 2, 3};
+        char [] arr2 = {'A', 'B'}; //ASCII code of 'A' is 65, 'B' is 66
+        arr1 = arr2;
+        for(int i = 0; i < arr1.length; i++) {
+            System.out.print(arr1[i] + " ");
+        }
+    }
+}  
+A.1 2 3
+B.A B 
+C.65 66
+D.CompilationError
+
+43.
+Question 43:
+What is the output if below program is run with the command line:
+java Test
+
+public class Test {
+    public static void main(String[] args) {
+        System.out.println(args.length);
+    }
+}
+A. 0
+B. NullPointerException
+C. ArrayIndexOutOfBoundsException
+D. 1
+
+44.
+Which of the following is true for code below?
+public class Test {
+    public static void main(String[] args) {
+        byte [] arr = new byte[0];
+        System.out.println(arr[0]);
+    }
+}
+A. CompilationError
+B. 0
+C. NullPointerException
+D. ArrayIndexOutOfBoundsException
+
+45.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        String [] arr = new String[1];
+        System.out.println(arr[0].isEmpty());
+    }
+}
+A. true
+B. false
+C. NullPointerException is thrown at runtime
+D. ArrayIndexOutOfBoundsException is thrown at runtime.
+
+46.
+Which of the following is not a valid array declaration?  
+  int[] arr=new int[3];
+  int[][] arr2= new int[8][8];
+  int[] arr3[] = new int[8][];
+  int[] arr4[] = new int[][8];
+   
+
+47.
+ What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        String[][] arr = { { "7", "6", "5" }, { "4", "3" }, { "2", "1" } };
+        for (int i = 0; i < arr.length; i++) { //Line n1
+            for (int j = 0; j < arr[i].length; j++) { //Line n2
+                switch (arr[i][j]) { //Line n3
+                    case "2":
+                    case "4":
+                    case "6":
+                        break; //Line n4
+                    default: 
+                        continue; //Line n5
+                }
+                System.out.print(arr[i][j]); //Line n6
+            }
+        }
+    }
+}
+A. 6
+B. 642
+C. 64
+D. 7
+E. 75
+F. 753
+G. 7531
+H. 7654321
+
+49.
+Given code:
+public class Test {
+    public static void main(String[] args) {
+        String [] arr = {"I", "N", "S", "E", "R", "T"};
+        for(/*INSERT*/) {
+            if (n % 2 == 0) {
+                continue;
+            }
+            System.out.print(arr[n]); //Line n1
+        }
+    }
+}
+And below options:
+1. int n = 0; n < arr.length; n += 1
+2. int n = 0; n <= arr.length; n += 1
+3. int n = 1; n < arr.length; n += 2
+4. int n = 1; n <= arr.length; n += 2
+How many above options can be used to replace /*INSERT*/, such that on execution, code will print NET on to the console?
+
+A. only one option
+B. only two option
+C. only three option
+D. all 4 options
+E. None of the options
+
+50.
+Given code:
+public class Test {
+    public static void main(String[] args) {
+        int [] arr = {1, 2, 3, 4, 5};
+        int x = 0;
+        for(/*INSERT*/) {
+            x += arr[n];
+        }
+        System.out.println(x);
+    }
+}
+Which 3 options, if used to replace /*INSERT*/, on execution will print 9 on to the console?
+A. int n=0;n<arr.length;n++
+B. int n=0;n<arr.length;n+=2
+C. int n=3;n<arr.length;n++
+D. int n=1;n<arr.length-1;n++
+E. int n=1;n<arr.length;n+=2
+
+51.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        double [] arr = new int[2]; //Line 3
+        System.out.println(arr[0]); //Line 4
+    }
+}
+A. 0
+B. 0.0
+C. Line 3 causes compilation error.
+D. Line 4 causes RunTimeError.
+
+52.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        String [] arr = {"A", "B", "C", "D"};
+        arr[0] = arr[1];
+        arr[1] = "E";
+        for(String s : arr) {
+            System.out.print(s + " ");
+        }
+    }
+}
+A. CompilationError
+B. An Exception is thrown at runtime
+C. BECD
+D. EECD
+E. AECD
+
+53.
+Consider below code of Test.java file: 
+public class Test {
+    public static void main(String[] args) {
+        String arr1 [], arr2, arr3 = null; //Line n1
+        arr1 = new String[2];
+        arr1[0] = "A";
+        arr1[1] = "B";
+        arr2 = arr3 = arr1; //Line n2
+        log(arr2); //Line n3
+    }
+    
+    private static void log(String... vals) {
+        for(String s : vals)
+            System.out.print(s);
+    }
+}
+
+A. Line n1 causes compile time error
+B. Line n2 causes compile time error
+C. Line n3 causes compile time error
+D. Prints AB on the console
+E. Prints BA on the console
+F. Prints A on the console
+G. Prints B on the console
+
+
+54.
+Consider below code of Test.java file: 
+public class Test {
+    public static void main(String[] args) {
+        String [] arr = new String[7];
+        System.out.println(arr);
+    }
+}
+What will be the result of compiling and executing Test class?
+A. An exception is thrown at runtime
+B. Compilation Error.
+C. It prints null
+D. It prints some text containing @symbol.
+
+56.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        int [] arr = {10, 20, 30}; //Line n1
+        int i = 0;
+        arr[i++] = arr[++i] = 40; //Line n2
+        for(int x : arr)
+            System.out.println(x);
+    }
+}
+What will be the result of compiling and executing Test class?
+A. Compilation Error at Line no 2
+B. An Exception is thrown by Line no 2.
+C. 10 
+   20
+   30
+D. 10
+   40
+   30
+E. 40
+   40
+   30
+G. 10
+   40
+   30
+H. 40
+   20
+   40
+
+57.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        String[] arr = { "L", "I", "V", "E" }; //Line n1
+        int i = -2;
+ 
+        if (i++ == -1) { //Line n2
+            arr[-(--i)] = "F"; //Line n3
+        } else if (--i == -2) { //Line n4
+            arr[-++i] = "O"; //Line n5
+        }
+        
+        for(String s : arr) {
+            System.out.print(s);
+        }
+    }
+}
+A. Compilation Error
+B. An Exception is thrown at runtime
+C. LIVE
+D. LIFE
+E. LIVO
+F. LOVE
+G. LIOE
+
+58.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        int var = 3;
+        String [][] arr = new String[--var][var++]; //Line n1
+        arr[1][1] = "X"; //Line n2
+        arr[1][2] = "Y"; //Line n3
+        for(String [] arr1 : arr) {
+            for(String s : arr1) {
+                if(s != null) 
+                    System.out.print(s);
+            }
+        }
+    }
+}
+What will be the result of compiling and executing Test class?
+A. It causes compilation error at single statement
+B. It causes compilation error at multiple statement
+C. It throws exception at runtime
+D. It prints XY on the console and terminates program succesfully.
+E. It prints XY on the console and terminates program abnormally.
+
+59.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        int[][] arr = new int[x][y]; //Line n1
+        arr[1][4] = 100;
+        arr[6][6] = 200;
+        arr[3][6] = 300;
+    }
+}
+And below combination of x and y values:
+1. x = 6, y = 6
+2. x = 2, y = 5
+3. x = 4, y = 7
+4. x = 7, y = 7
+5. x = 8, y = 8
+6. x = 0, y = 0
+7. x = -1, y = -1
+How many of above x,y pair(s) can replace x and y at Line n1 such that Test.java file compiles successfully?
+A. All  7 pairs
+B. 6 pairs
+C. 5 pairs
+D. 4 pairs
+E. 3 pairs
+F. 2 pairs
+G. 1 pairs
+
+60.
+Which of the following statement is correct for below code?
+public class Test {
+    public static void main(String[] args) {
+        final boolean flag = false;
+        while(flag) {
+            System.out.println("Good Morning!");
+        }
+    }
+}
+A. Program compiles and exeuctes succesfully but produces no output
+B. Compilation Error
+C. Infinite loop
+D. It will print Good Morning! Once.
+
+61.
+Which of the following statement is correct for below code? 
+public class Test {
+    public static void main(String[] args) {
+        final boolean flag;
+        flag = false;
+        while(flag) {
+            System.out.println("Good Morning!");
+        }
+    }
+}
+A. Program compiles and exeuctes succesfully but produces no output
+B. Compilation Error
+C. Infinite loop
+D. It will print Good Morning! Once.
+
+62.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int x = 5;
+        while (x < 10) 
+            System.out.println(x);
+            x++;
+    }
+} 
+A. Compilation Error
+B. 5
+   6
+   7
+   8
+   9
+C. It will go in for an infinite loop
+D. Produces No Output.
+
+63.
+Which of the following statement is correct about below code?
+public class Test {
+    public static void main(String[] args) {
+        do {
+            System.out.println(100);
+        } while (true);
+        
+        System.out.println("Bye");
+    }
+}
+A. Compile succesfully and prints Bye
+B. Compile succesfully and prints 100 in infinite loop.
+C. Unreachable code compilation error
+D. 100
+   Bye
+
+64.
+Which of the following statement is correct about below code?
+public class Test {
+    public static void main(String[] args) {
+        do {
+            System.out.println(100);
+        } while (false);
+        System.out.println("Bye");
+    }
+}
+A. Compile succesfully and prints Bye
+B. Compile succesfully and prints 100 in infinite loop.
+C. Unreachable code compilation error
+D. 100
+   Bye
+
+65.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int start = 1;
+        int sum = 0;
+        do {
+            if(start % 2 == 0) {
+                continue;
+            }
+            sum += start;
+        } while(++start <= 10);
+        System.out.println(sum);
+    }
+}
+A. 25
+B. 55
+C. CompilationError
+D. 24
+
+66.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        for(int i=0; i<=2; i++){}
+        System.out.println(i);
+    }
+}
+A. 0
+B. 2
+C. 3
+D. Compilation Error
+
+67.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int i;
+        for(i=0; i<=2; i++){}
+        System.out.println(i);
+    }
+}
+A. 0
+B. 2
+C. 3
+D. Compilation Error
+
+68.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        for:
+        for (int i = 2; i <= 100; i = i + 2) {
+            for(int j = 1; j <= 10; j++) {
+                System.out.print(i * j + "\t");
+            }
+            System.out.println();
+            if(i == 10) {
+                break for;
+            }
+        }
+    }
+}
+A. Total 5 rows will be their in the output
+B. Total 50 rows will be their in the output
+C. Total 100 rows will be their in the output
+D. Compilation Error.
+
+69.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int i;
+        outer: 
+        do {
+            i = 5;
+            inner:
+            while (true) {
+                System.out.println(i--);
+                if (i == 4) {
+                    break outer;
+                }
+            }
+        } while (true);
+    }
+}
+A. Print 5 infinite times
+B. Print 5 once
+C. Compilation Error
+D. 5
+   3
+   2
+   1
+
+70.
+Consider given code: 
+public class Test {
+    public static void main(String[] args) {
+        String [][] fruits = {{"apple", "mango"}, {"orange", "grape"}};
+        /*INSERT*/
+    }
+}
+For the class Test, which options, if used to replace /*INSERT*/, will print "apple mango orange grape " on to the console?
+
+Select 2 options.
+1.
+ for(int i=0;i<fruits.length;i++)
+   for(int j=0;j<fruits[i].length;j++)
+       System.out.print(fruits[i][j]+"");
+
+2.
+ for(int i=1;i<fruits.length;i++)
+   for(int j=1;j<fruits[i].length;j++)
+       System.out.print(fruits[i][j]+"");
+
+3.
+ for(int i=0;i<=fruits.length;i++)
+   for(int j=0;j<=fruits[i].length;j++)
+       System.out.print(fruits[i][j]+"");
+
+4. for(String[] arr:fruits)
+      for(String fruit:arr)
+	  System.out.print(fruit+"");
+
+71.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int [] arr = {2, 1, 0};
+        for(int i : arr) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+A. 2
+   1
+   0
+
+B. 0
+   1
+   2
+
+C. Compilation Error.
+D. ArrayIndexOutOfBoundsException  is thrown at runtime.
+
+72.
+What will be the result of compiling and executing Test class?
+public class Test {
+    public static void main(String[] args) {
+        int [] arr = {3, 2, 1};
+        for(int i : arr) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+A. 3
+   2
+   1
+B. 1
+   2
+   3
+C. Compilation Error
+D. ArrayIndexOutOfBoundsException is thrown at runtime.
+
+73.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        int elements = 0;
+        Object [] arr = {"A", "E", "I", new Object(), "O", "U"}; //Line n1
+        for(Object obj : arr) { //Line n2
+            if(obj instanceof String) {
+                continue;
+            } else {
+                break;
+            }
+            elements++; //Line n3
+        }
+        System.out.println(elements); //Line n4
+    }
+}
+What will be the result of compiling and executing Test class?
+A. 0
+B. 1
+C. 3
+D. 5
+E. 6
+F. CompilationError  at Line1
+G. CompilationError  at Line2
+H. CompilationError  at Line3
+I. CompilationError  at Line4
+
+74.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        String [][] arr = { {"%", "$$"}, {"***", "@@@@", "#####"}};
+        for(String [] str : arr) {
+            for(String s : str) {
+                System.out.println(s);
+                if(s.length() == 4) //Line n1
+                    break; //Line n2
+            }
+            break; //Line n3
+        }
+    }
+}
+What will be the result of compiling and executing Test class?
+A. %
+
+B. %
+   $$
+
+C. %
+   $$
+   ***
+D. %
+   $$
+   *** 
+   @@@@
+
+E. %
+   $$
+   ***
+   @@@@
+   ##### 
+
+75.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        int ctr = 100;
+        one: for (int i = 0; i < 10; i++) {
+            two: for (int j = 0; j < 7; j++) {
+                three: while (true) {
+                    ctr++;
+                    if (i > j) {
+                        break one;
+                    } else if (i == j) {
+                        break two;
+                    } else {
+                        break three;
+                    }
+                }
+            }
+        }
+        System.out.println(ctr);
+    }
+}
+What will be the result of compiling and executing Test class?
+A. Compilation Error
+B. 100
+C. 101
+D. 102
+E. 103
+F. 104
+G. 105
+H. 106
+
+76.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        int i = 1;
+        int j = 5;
+        int k = 0;
+        A: while(true) {
+            i++;
+            B: while(true) {
+                j--;
+                C: while(true) {
+                    k += i + j;
+                    if(i == j)
+                        break A;
+                    else if (i > j)
+                        continue A;
+                    else 
+                        continue B;
+                }
+            }
+        }
+        System.out.println(k);
+    }
+}
+What will be the result of compiling and executing Test class?
+A. Compilation Error
+B. 6
+C. 11
+D. 15
+E. Program never terminates it results in infinte loop
+F. None of the above
+
+
+77.	
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        outer: for(int i = 0; i < 3; System.out.print(i)) {
+            i++;
+            inner: for(int j = 0; j < 3; System.out.print(j)) {
+                if(i > ++j) {
+                    break outer;
+                }
+            }
+        }
+    }
+}
+What will be the result of compiling and executing Test class?
+A. CompilationError
+B. Program terminates succesfully but nothing printed on the console
+C. Program terminates succesfully after printing 1 on to the console
+D. Program terminates succesfully after printing 12 on to the console
+E. Program terminates succesfully after printing 123 on to the console
+F. Program terminates succesfully after printing 1231 on to the console
+G. Program terminates succesfully after printing 121 on to the console
+H. Program terminates succesfully after printing 0120 on to the console
+
+78.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        int i = 0;
+        for(System.out.print(i++); i < 2; System.out.print(i++)) {
+            System.out.print(i);
+        }
+    }
+}
+What will be the result of compiling and executing Test class?
+A. 112
+B. 012
+C. 011
+D. 12
+E. 01
+F. CompilationError
+
+
+79.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        for(int x = 10, y = 11, z = 12; y > x && z > y; y++, z -= 2) {
+            System.out.println(x + y + z);
+        }
+    }
+}
+What will be the result of compiling and executing Test class?
+A. 33
+B. 32
+C. 34
+D. 33
+   32
+E. CompilationError
+
+80.
+Consider below code of Test.java file:
+public class Test {
+    public static void main(String[] args) {
+        boolean flag = false;
+        do {
+            if(flag = !flag) { //Line n1
+                System.out.print(1); //Line n2
+                continue; //Line n3
+            }
+            System.out.print(2); //Line n4
+        } while(flag); //Line n5
+    }
+}
+What will be the result of compiling and executing Test class?
+A. 1
+B. 2
+C. 12
+D. 21
+E. 212
+F. 121
+G. 112
+H. 221
+I. CompilationError
+
+
+81.
+Given code:
+public class Test {
+    public static void main(String[] args) {
+        /*INSERT*/
+        arr[1] = 5;
+        arr[2] = 10;
+        System.out.println("[" + arr[1] + ", " + arr[2] + "]"); //Line n1
+    }
+}
+And below statements:
+1. short arr [] = new short[2];
+2. byte [] arr = new byte[10];
+3. short [] arr; 
+   arr = new short[3];
+4. short [2] arr;
+5. short [3] arr;
+6. int [] arr = new int[]{100, 100};
+7. int [] arr = new int[]{0, 0, 0, 0};
+8. short [] arr = {};
+9. short [] arr = new short[2]{5, 10};
+
+How many above statements can be used to replace /*INSERT*/, such that on execution, code will print [5, 10] on to the console?
+A. Only one option
+B. Only two option
+C. Only three option
+D. Only four option
+E. None of the given option
+F. More than 4 option
+
+82.
+package com.abc.nitin;
+
+public class Counter {
+    public int count = 0;
+ 
+    public Counter(int start) {
+        count = start;
+    }
+ 
+    public int getCount() {
+        return count;
+    }
+ 
+    public void increase(int val) {
+        count = count + val;
+    }
+ 
+    public String toString() {
+        return this.count + "";
+    }
+}
+
+
+//Test.java
+import java.util.Arrays;
+import com.abc.nitin.Counter;
+public class Test {
+    public static void main(String[] args) {
+        Counter[] arr = new Counter[] { new Counter(-1000), new Counter(539), new Counter(0) };
+ 
+        /* INSERT */
+ 
+        System.out.println(Arrays.toString(arr));
+    }
+}
+Currently on executing Test class, output is: [-1000, 539, 0].
+And below blocks:
+1.
+for(Counter ctr : arr) {
+    ctr.count = 100;
+}
+
+2.
+for (Counter ctr : arr) {
+    int x = ctr.getCount();
+    x = 100;
+}
+
+3.
+for (Counter ctr : arr) {
+    ctr.getCount() = 100;
+}
+
+4.
+for(Counter ctr : arr) {
+    ctr.increase(100 - ctr.count);
+}
+
+5.
+for (Counter ctr : arr) {
+    ctr.increase(100 - ctr.getCount());
+}
+
+6.
+for(Counter ctr : arr) {
+	ctr.increase(-ctr.getCount() + 100);
+}
+
+7.
+for(Counter ctr : arr) {
+    ctr.increase(-ctr.count + 100);
+}
+How many blocks can replace /*INSERT*/ such that output is: [100, 100, 100]?
+
+
+
+
+83.
+   Consider the following snippet and predict the output
+public class Test{
+	public static void main(String... args){
+		String language="java";
+		
+		while(language.equals("java"){
+			if(language.equals("java"))
+				language=language.toUpperCase();
+			if(language.equals("JAVA"))
+				language=language.toLowerCase();
+
+		}
+		System.out.println(language);	//line n1
+	}
+}
+A. java
+B. JAVA
+C. Compile time error at line n1
+D. Infintie time loop will run
+E. None of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

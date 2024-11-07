@@ -1,0 +1,883 @@
+public class Test {
+ public static void main(String [] args) {
+    int x = 5;
+    boolean b1 = true;
+    boolean b2 = false;
+
+   if ((x == 4) && !b2 )
+    System.out.print("1 ");
+   System.out.print("2 ");
+   if ((b2 = true) && b1 )
+     System.out.print("3 ");
+ }
+ }
+What is the result?
+A. 2
+B. 3
+C. 1 2
+D. 2 3
+E. 1 2 3
+F. Compilation fails.
+G. An exception is thrown at runtime.
+
+
+Given:
+public void go() {
+String o = "";
+z:
+for(int x = 0; x < 3; x++) {
+for(int y = 0; y < 2; y++) {
+if(x==1)break;
+  if(x==2 && y==1) break z;
+o = o + x + y;
+}
+}
+System.out.println(o);
+}
+What is the result when the go() method is invoked?
+A. 00
+B. 0001
+C. 000120
+D. 00012021
+E. Compilation fails.
+F. An exception is thrown at runtime.
+
+
+Given:
+int x = 0;
+int y = 10;
+do {
+y--;
+++x;
+} while (x < 5);
+System.out.print(x + "," + y);
+What is the result?
+A. 5,6
+B. 5,5
+C. 6,5
+D. 6,6
+
+
+Given:
+public class Batman {
+   int squares = 81;
+   public static void main(String[] args) {
+     new Batman().go();
+  }
+   void go() {
+    incr(++squares);
+    System.out.println(squares);
+   }
+   void incr(int squares) { squares += 10; }
+   }
+
+What is the result?
+A. 81
+B. 82
+C. 91
+D. 92
+E. Compilation fails.
+F. An exception is thrown at runtime.
+
+
+Given:
+public class Yippee {
+public static void main(String [] args) {
+for(int x = 1; x < args.length; x++) {
+   System.out.print(args[x] + " ");
+}
+}
+}
+and two separate command line invocations:
+java Yippee
+java Yippee 1 2 3 4
+What is the result?
+A. No output is produced.
+   1 2 3
+B. No output is produced.
+   2 3 4
+C. No output is produced.
+   1 2 3 4
+D. An exception is thrown at runtime.
+   1 2 3
+E. An exception is thrown at runtime.
+   2 3 4
+F. An exception is thrown at runtime.
+   1 2 3 4
+
+
+Given:
+  public class Pass {
+    public static void main(String [] args) {
+    int x = 5;
+    Pass p = new Pass();
+    p.doStuff(x);
+    System.out.print(" main x = " + x);
+   }
+ 
+   void doStuff(int x) {
+     System.out.print(" doStuff x = " + x++);
+   }
+  }
+What is the result?
+A. Compilation fails.
+B. An exception is thrown at runtime.
+C. doStuff x = 6 main x = 6
+D. doStuff x = 5 main x = 5
+E. doStuff x = 5 main x = 6
+F. doStuff x = 6 main x = 5
+
+
+Given:
+String[] elements = { "for", "tea", "too" };
+String first = (elements.length > 0) ? elements[0] : null;
+
+What is the result?
+A. Compilation fails.
+B. An exception is thrown at runtime.
+C. The variable first is set to null.
+D. The variable first is set to elements[0].
+
+
+Given:
+35. String #name = "Jane Doe";
+36. int $age = 24;
+37. Double _height = 123.5;
+38. double ~temp = 37.5;
+Which two statements are true? (Choose two.)
+A. Line 35 will not compile.
+B. Line 36 will not compile.
+C. Line 37 will not compile.
+D. Line 38 will not compile.
+
+
+Given:
+ public class Barn {
+   public static void main(String[] args) {
+     new Barn().go("hi", 1);
+     new Barn().go("hi", "world", 2);
+  }
+  public void go(String... y, int x) {
+     System.out.print(y[y.length - 1] + " ");
+   }
+ }
+What is the result?
+A. hi hi
+B. hi world
+C. world world
+D. Compilation fails.
+E. An exception is thrown at runtime.
+
+
+Given:
+1. public class Mud {
+2.   //insert code here
+3.    System.out.println("hi");
+4. }
+5. }
+And the following five fragments:
+public static void main(String...a) {
+public static void main(String.* a) {
+public static void main(String... a) {
+public static void main(String[]... a) {
+public static void main(String...[] a) {
+How many of the code fragments, inserted independently at line 2, compile?
+A. 0
+B. 1
+C. 2
+D. 3
+E. 4
+F. 5
+
+
+Given:
+1. public class TestString1 {
+2. public static void main(String[] args) {
+3. String str = "420";
+4. str += 42;
+5. System.out.print(str);
+6. }
+7. }
+What is the output?
+A. 42
+B. 420
+C. 462
+D. 42042
+E. Compilation fails.
+F. An exception is thrown at runtime.
+
+
+Given:
+22. StringBuilder sb1 = new StringBuilder("123");
+23. String s1 = "123";
+24. // insert code here
+25. System.out.println(sb1 + " " + s1);
+Which code fragment, inserted at line 24, outputs "123abc 123abc"?
+A. sb1.append("abc"); s1.append("abc");
+B. sb1.append("abc"); s1.concat("abc");
+C. sb1.concat("abc"); s1.append("abc");
+D. sb1.concat("abc"); s1.concat("abc");
+E. sb1.append("abc"); s1 = s1.concat("abc");
+F. sb1.concat("abc"); s1 = s1.concat("abc");
+G. sb1.append("abc"); s1 = s1 + s1.concat("abc");
+H. sb1.concat("abc"); s1 = s1 + s1.concat("abc");
+
+
+Given:
+Float pi = new Float(3.14f);
+if (pi > 3) {
+System.out.print("pi is bigger than 3. ");
+}
+else {
+System.out.print("pi is not bigger than 3. ");
+}
+finally {
+System.out.println("Have a nice day.");
+}
+What is the result?
+A. Compilation fails.
+B. pi is bigger than 3.
+C. An exception occurs at runtime.
+D. pi is bigger than 3. Have a nice day.
+E. pi is not bigger than 3. Have a nice day.
+
+
+Given:
+1. public class Boxer1{
+2. Integer i;
+3. int x;
+4. public Boxer1(int y) {
+5.    x = i+y;
+6. System.out.println(x);
+7. }
+8. public static void main(String[] args) {
+9. new Boxer1(new Integer(4));
+10. }
+11.}
+What is the result?
+A. The value "4" is printed at the command line.
+B. Compilation fails because of an error in line 5.
+C. Compilation fails because of an error in line 9.
+D. A NullPointerException occurs at runtime.
+E. A NumberFormatException occurs at runtime.
+F. An IllegalStateException occurs at runtime.
+
+
+Given:
+23. Object [] myObjects = {
+24. new Integer(12),
+25. new String("foo"),
+26. new Integer(5),
+27. new Boolean(true)
+28. };
+29. Arrays.sort(myObjects);
+30. for(int i=0; i<myObjects.length; i++) {
+31. System.out.print(myObjects[i].toString());
+32. System.out.print(" ");
+33. }
+What is the result?
+A. Compilation fails due to an error in line 23.
+B. Compilation fails due to an error in line 29.
+C. A ClassCastException occurs in line 29.
+D. A ClassCastException occurs in line 31.
+E. The value of all four objects prints in natural order.
+
+
+Given:
+import java.util.*;
+public class Quest {
+public static void main(String[] args) {
+String[] colors = {"blue", "red", "green", "yellow", "orange"};
+Arrays.sort(colors);
+int s2 = Arrays.binarySearch(colors, "orange");
+int s3 = Arrays.binarySearch(colors, "violet");
+System.out.println(s2 + " " + s3);
+}
+}
+What is the result?
+A. 2 -1
+B. 2 -4
+C. 2 -5
+D. 3 -1
+E. 3 -4
+F. 3 -5
+G. Compilation fails.
+H. An exception is thrown at runtime.
+
+
+
+What is the result?
+1. public class A{
+2.
+3. private int counter = 0;
+4.
+5. public static int getInstanceCount() {
+6. return counter;
+7. }
+8.
+9. public A() {
+10. counter++;
+11. }
+12.
+13.}
+A. Compilation of class A fails.
+B. Line 28 prints the value 3 to System.out.
+C. Line 28 prints the value 1 to System.out.
+D. A runtime error occurs when line 25 executes.
+E. Compilation fails because of an error on line 28.
+
+
+Given:
+public static void test(String str) {
+int check = 4;
+if (check = str.length()) {
+System.out.print(str.charAt(check -= 1) +", ");
+} else {
+System.out.print(str.charAt(0) + ", ");
+}
+}
+and the invocation:
+test("four");
+test("tee");
+test("to");
+What is the result?
+A. r, t, t,
+B. r, e, o,
+C. Compilation fails.
+D. An exception is thrown at runtime.
+
+
+
+Given:
+public class Pass2 {
+public void main(String [] args) {
+int x = 6;
+Pass2 p = new Pass2();
+p.doStuff(x);
+System.out.print(" main x = " + x);
+}
+void doStuff(int x) {
+System.out.print(" doStuff x = " + x++);
+}
+}
+And the command-line invocations:
+javac Pass2.java
+java Pass2 5
+What is the result?
+A. Compilation fails.
+B. An exception is thrown at runtime.
+C. doStuff x = 6 main x = 6
+D. doStuff x = 6 main x = 7
+E. doStuff x = 7 main x = 6
+F. doStuff x = 7 main x = 7
+
+
+Given:
+public static void main(String[] args) {
+Integer i = new Integer(1) + new Integer(2);
+switch(i) {
+case 3: System.out.println("three"); break;
+default: System.out.println("other"); break;
+}
+}
+What is the result?
+A. three
+B. other
+C. An exception is thrown at runtime.
+D. Compilation fails because of an error on line 12.
+E. Compilation fails because of an error on line 13.
+F. Compilation fails because of an error on line 15.
+
+
+QUESTION 24
+Given:
+1. public class TestString3 {
+2. public static void main(String[] args) {
+3. // insert code here
+4.
+5. System.out.println(s);
+6. }
+7. }
+Which two code fragments, inserted independently at line 3, generate the output 4247? 
+    (Choose two.)
+A. String s = "123456789";
+    s = (s-"123").replace(1,3,"24") - "89";
+B. StringBuffer s = new StringBuffer("123456789");
+C. s.delete(0,3).replace(1,3,"24").delete(4,6);
+D. StringBuffer s = new StringBuffer("123456789");
+E. substring(3,6).delete(1,3).insert(1, "24");
+F. StringBuilder s = new StringBuilder("123456789");
+G. substring(3,6).delete(1,2).insert(1, "24");
+H. StringBuilder s = new StringBuilder("123456789");
+I. delete(0,3).delete(1,3).delete(2,5).insert(1, "24");
+
+
+Question
+1. public class BuildStuff {
+2. public static void main(String[] args) {
+3. Boolean test = new Boolean(true);
+4. Integer x = 343;
+5. Integer y = new BuildStuff().go(test, x);
+6. System.out.println(y);
+7. }
+8. int go(Boolean b, int i) {
+9. if(b) return (i/7);
+10. return (i/49);
+11. }
+12.}
+What is the result?
+A. 7
+B. 49
+C. 343
+D. Compilation fails.
+E. An exception is thrown at runtime.
+
+
+Given:
+1. class Alligator {
+2. public static void main(String[] args) {
+3. int[] x[] = { { 1, 2 }, { 3, 4, 5 }, { 6, 7, 8, 9 } };
+4. int[][] y = x;
+5. System.out.println(y[2][1]);
+6. }\
+7. }
+What is the result?
+A. 2
+B. 3
+C. 4
+D. 6
+E. 7
+F. Compilation fails.
+
+Given
+11. public static void main(String[] args) {
+12. Object obj = new int[] { 1, 2, 3 };
+13. int[] someArray = (int[])obj;
+14. for (int i : someArray) System.out.print(i + " ");
+15. }
+What is the result?
+A. 1 2 3
+B. Compilation fails because of an error in line 12.
+C. Compilation fails because of an error in line 13.
+D. Compilation fails because of an error in line 14.
+E. A ClassCastException is thrown at runtime.
+
+Given:
+public class Breaker {
+static String o = "";
+public static void main(String[] args) {
+z: o = o + 2;
+for (int x = 3; x < 8; x++) {
+if (x == 4)
+break;
+if (x == 6)
+break z;
+o = o + x;
+}
+System.out.println(o);
+}
+}
+What is the result?
+A. 23
+B. 234
+C. 235
+D. 2345
+E. 2357
+F. 23457
+G. Compilation fails.
+
+Given:
+public static void main(String[] args) {
+for (int i = 0; i <= 10; i++) {
+if (i > 6) break;
+}
+System.out.println(i);
+}
+What is the result?
+A. 6
+B. 7
+C. 10
+D. 11
+E. Compilation fails.
+F. An exception is thrown at runtime.
+
+Given:
+public static void main(String[] args) {
+try {
+args = null;
+args[0] = "test";
+System.out.println(args[0]);
+} catch (Exception ex) {
+System.out.println("Exception");
+} catch (NullPointerException npe) {
+System.out.println("NullPointerException");
+}
+}
+What is the result?
+A. test
+B. Exception
+C. Compilation fails.
+D. NullPointerException
+
+
+Given
+Which two code fragments are most likely to cause a StackOverflowError? (Choose two.)
+A. int []x = {1,2,3,4,5};
+for(int y = 0; y < 6; y++)
+System.out.println(x[y]);
+B. static int[] x = {7,6,5,4};
+static { x[1] = 8;
+x[4] = 3; }
+C. for(int y = 10; y < 10; y++)
+doStuff(y);
+D. void doOne(int x) { doTwo(x); }
+void doTwo(int y) { doThree(y); }
+void doThree(int z) { doTwo(z); }
+E. for(int x = 0; x < 1000000000; x++)
+doStuff(x);
+F. void counter(int i) { counter(++i); }
+
+
+Given
+interface Fish {
+}
+class Perch implements Fish {
+}
+class Walleye extends Perch {
+}
+class Bluegill {
+}
+public class Fisherman {
+public static void main(String[] args) {
+Fish f = new Walleye();
+Walleye w = new Walleye();
+Bluegill b = new Bluegill();
+if (f instanceof Perch)
+System.out.print("f-p ");
+if (w instanceof Fish)
+System.out.print("w-f ");
+if (b instanceof Fish)
+System.out.print("b-f ");
+}
+}
+What is the result?
+A. w-f
+B. f-p w-f
+C. w-f b-f
+D. f-p w-f b-f
+E. Compilation fails.
+F. An exception is thrown at runtime.
+
+
+Given
+12. String csv = "Sue,5,true,3";
+13. Scanner scanner = new Scanner( csv );
+14. scanner.useDelimiter(",");
+15. int age = scanner.nextInt();
+What is the result?
+A. Compilation fails.
+B. After line 15, the value of age is 5.
+C. After line 15, the value of age is 3.
+D. An exception is thrown at runtime.
+
+Given
+String test = "a1b2c3";
+12. String[] tokens = test.split("\\d");
+13. for(String s: tokens) System.out.print(s + " ");
+What is the result?
+A. a b c
+B. 1 2 3
+C. a1b2c3
+D. a1 b2 c3
+E. Compilation fails.
+F. The code runs with no output.
+G. An exception is thrown at runtime.
+
+
+Given
+1. public class KungFu {
+2. public static void main(String[] args) {
+3. Integer x = 400;
+4. Integer y = x;
+5. x++;
+6. StringBuilder sb1 = new StringBuilder("123");
+7. StringBuilder sb2 = sb1;
+8. sb1.append("5");
+9. System.out.println((x == y) + " " + (sb1 == sb2));
+10. }
+11.}
+What is the result?
+A. true true
+B. false true
+C. true false
+D. false false
+E. Compilation fails.
+F. An exception is thrown at runtime.
+
+Given
+class Converter {
+public static void main(String[] args) {
+Integer i = args[0]; // line 13
+int j = 12;
+System.out.println("It is " + (j == i) + " that j==i.");
+}
+}
+What is the result when the programmer attempts to compile the code and run it with the command java
+Converter 12?
+A. It is true that j==i.
+B. It is false that j==i.
+C. An exception is thrown at runtime.
+D. Compilation fails because of an error in line 13.
+
+Given
+public class A {
+2. public String doit(int x, int y){
+3. return "a";
+4. }
+5.
+6. public String doit(int... vals){
+7. return "b";
+8. }
+9. }
+Given:
+25. A a = new A();
+26. System.out.println(a.doit(4, 5));
+What is the result?
+A. Line 26 prints "a" to System.out.
+B. Line 26 prints "b" to System.out.
+C. An exception is thrown at line 26 at runtime.
+D. Compilation of class A will fail due to an error in line 6.
+
+
+Given
+public class Yikes {
+public static void go(Long n) {
+System.out.print("Long ");
+}
+public static void go(Short n) {
+System.out.print("Short ");
+}
+public static void go(int n) {
+System.out.print("int ");
+}
+public static void main(String[] args) {
+short y = 6;
+long z = 7;
+go(y);
+go(z);
+}
+}
+What is the result?
+A. int Long
+B. Short Long
+C. Compilation fails.
+D. An exception is thrown at runtime.
+
+
+Given
+1. public class Venus {
+2. public static void main(String[] args) {
+3. int[] x = { 1, 2, 3 };
+4. int y[] = { 4, 5, 6 };
+5. new Venus().go(x, y);
+6. }
+7.
+8. void go(int[]... z) {
+9. for (int[] a : z)
+10. System.out.print(a[0]);
+11. }
+12.}
+What is the result?
+A. 1
+B. 12
+C. 14
+D. 123
+E. Compilation fails.
+F. An exception is thrown at runtime.
+
+
+
+Given:
+1. public class Breaker2 {
+2. static String o = "";
+3.
+4. public static void main(String[] args) {
+5. z: for (int x = 2; x < 7; x++) {
+6. if (x == 3)
+7. continue;
+8. if (x == 5)
+9. break z;
+10. o = o + x;
+11. }
+12. System.out.println(o);
+13. }
+14.}
+15.
+What is the result?
+A. 2
+B. 24
+C. 234
+D. 246
+E. 2346
+F. Compilation fails.
+
+Given:
+public static void main(String[] args) {
+String str = "null";
+if (str == null) {
+System.out.println("null");
+} else (str.length() == 0) {
+System.out.println("zero");
+} else {
+System.out.println("some");
+}
+}
+What is the result?
+A. null
+B. zero
+C. some
+D. Compilation fails.
+E. An exception is thrown at runtime.
+
+Given
+public class Spock {
+public static void main(String[] args) {
+Long tail = 2000L;
+Long distance = 1999L;
+Long story = 1000L;
+if ((tail > distance) ^ ((story * 2) == tail))
+System.out.print("1");
+if ((distance + 1 != tail) ^ ((story * 2) == distance))
+System.out.print("2");
+}
+}
+What is the result?
+A. 1
+B. 2
+C. 12
+D. Compilation fails.
+E. No output is produced.
+F. An exception is thrown at runtime.
+
+Given:
+1. public class Pass2 {
+2. public void main(String[] args) {
+3. int x = 6;
+4. Pass2 p = new Pass2();
+5. p.doStuff(x);
+6. System.out.print(" main x = " + x);
+7. }
+8.
+9. void doStuff(int x) {
+10. System.out.print(" doStuff x = " + x++);
+11. }
+12.}
+
+And the command-line invocations:
+javac Pass2.java
+java Pass2 5
+What is the result?
+A. Compilation fails.
+B. An exception is thrown at runtime.
+C. doStuff x = 6 main x = 6
+D. doStuff x = 6 main x = 7
+E. doStuff x = 7 main x = 6
+F. doStuff x = 7 main x = 7
+
+Given:
+1. public class GC {
+2. private Object o;
+3. private void doSomethingElse(Object obj) { o = obj; }
+4. public void doSomething() {
+5. Object o = new Object();
+6. doSomethingElse(o);
+7. o = new Object();
+8. doSomethingElse(null);
+9. o = null;
+10. }
+11.}
+When the doSomething method is called, after which line does the Object created in line 5 become
+available for garbage collection?
+A. Line 5
+B. Line 6
+C. Line 7
+D. Line 8
+E. Line 9
+F. Line 10
+
+
+Given
+public class Test{
+  public static void main(String[] args){
+		String[] arr = {"L","I","V","E"};
+		int i=-2;
+                
+		if(i++==-1) arr[-(--i)]="F";
+                else if (--i==-2)  arr[-++i] = "O";
+		
+		for(String s: arr) System.out.print(s);
+  }
+}
+A. compilation error
+B. An exception is thrown at runtime
+C. LIVE
+D. LIFE
+E. LIVO
+F. LOVE
+G. LIOE
+
+
+Given
+ public class Test{
+	Boolean b[] = new Boolean[2];
+	public static void main(String... args){
+		Test t= new Test();
+		System.out.println(t.b[0] + ":" +t.b[1]);
+	}
+ }
+
+A. NullpointerException
+B. false:false
+C. true:true
+D. null:null
+E. RunTimeException other than NullPointerException
+
+
+Given
+class Alien {
+String invade(short ships) { return "a few"; }
+String invade(short... ships) { return "many"; }
+}
+class Defender {
+public static void main(String [] args) {
+System.out.println(new Alien().invade(7));
+} }
+
+What is the result?
+A. many
+B. a few
+C. Compilation fails
+D. The output is not predictable
+E. An exception is thrown at runtime
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,344 @@
+LambdaExpression in Collection
+==============================
+ 1. List(I)
+	-> ArrayList,LinkedList,Vector,Stack
+	-> Insertion order is preserved.
+	-> Duplicate Objects are allowed.
+
+ 2. Set(I)
+	-> HashSet,TreeSet(based on some sorting)
+	-> Insertion order is not preserved becoz data would be stored based on HashCode.
+	-> Duplicate Objects are not allowed.
+
+ 3. Map(I)
+        -> HashMap,TreeMap(based on some sorting)
+	-> Data would be stored in the form of K,V pair
+	-> Insertion order is not preserved becoz data would be stored based on HashCode of Key.
+	-> Duplicate Objects are not allowed.
+
+Comparator(I)
+  -> It contains only one abstract method called "compare()".
+  -> To define our own sorting we need to use Customized Sorting.
+  -> public int compare(Object obj1,Object obj2)
+		 => return -ve iff obj1 has to come before obj2.
+                 => return +ve iff obj1 has to come after obj2.
+		 => return 0 iff obj1 and obj2 are equal.
+
+
+SortedCollections
+=================
+1. SortedList
+2. SortedMap
+3. SortedSet
+
+Sorted List
+===========
+List(may be ArrayList,LinkedList,Vector or Stack) never talks about sorting order. 
+If we want sorting for the list then we should use Collections class sort() method.
+Collecttions.sort(list)==>meant for Default Natural Sorting Order
+For String objects: Alphabetical Order
+For Numbers : Ascending order
+
+Demo Program to Sort elements of ArrayList according to Defaut Natural Sorting Order
+(Ascending Order):
+
+1) import java.util.ArrayList; 
+2) import java.util.Collections; 
+3) class Test 
+4) { 
+5) 	public static void main(String[] args) 
+6) 	{ 
+7) 		ArrayList<Integer> l = new ArrayList<Integer>(); 
+8) 			l.add(10); 
+9) 			l.add(0); 
+10) 			l.add(15); 
+11) 			l.add(5); 
+12) 			l.add(20); 
+13) 		System.out.println("Before Sorting:"+l); 
+14) 		Collections.sort(l); 
+15) 		System.out.println("After Sorting:"+l); 
+16) 	} 
+17) } 
+Output:
+Before Sorting:[10, 0, 15, 5, 20]
+After Sorting:[0, 5, 10, 15, 20]
+
+Instead of Default natural sorting order if we want customized sorting order then we should go for 
+Comparator interface.
+Comparator interface contains only one abstract method: compare()
+Hence it is Functional interface.
+public int compare(obj1,obj2)
+	returns -ve iff obj1 has to come before obj2
+	returns +ve iff obj1 has to come after obj2
+	returns 0 iff obj1 and obj2 are equal
+Collections.sort(list,Comparator)==>meant for Customized Sorting Order
+
+Demo Program to Sort elements of ArrayList according to Customized Sorting Order
+			(Descending Order):
+
+1) import java.util.TreeSet; 
+2) import java.util.Comparator; 
+3) class MyComparator implements Comparator<Integer> 
+4) { 
+5) 	public int compare(Integer I1,Integer I2) 
+6) 	{ 
+7) 		if(I1<I2) 
+8) 		{ 
+9) 			return +1; 
+10) 		} 
+11) 		else if(I1>I2) 
+12) 		{ 
+13) 			return -1; 
+14) 		} 
+15) 		else 
+16) 		{ 
+17) 			return 0; 
+18) 		} 
+19) 	} 
+20) } 
+21) class Test 
+22) { 
+23) 	public static void main(String[] args) 
+24) 	{ 
+25) 		TreeSet<Integer> l = new TreeSet<Integer>(new MyComparator()); 
+26)			 l.add(10); 
+27) 			 l.add(0); 
+28) 			 l.add(15); 
+29) 			 l.add(5); 
+30) 			 l.add(20); 
+31) 			System.out.println(l); 
+32)    } 
+33) }
+ 
+//Descending order Comparator
+Output: [20, 15, 10, 5, 0]
+
+Shortcut way:
+1) import java.util.ArrayList; 
+2) import java.util.Comparator; 
+3) import java.util.Collections; 
+4) class MyComparator implements Comparator<Integer> 
+5) { 
+6) 	public int compare(Integer I1,Integer I2) 
+7) 	{ 
+8) 		return (I1>I2)?-1:(I1<I2)?1:0; 
+9) 	} 
+10) } 
+11) class Test 
+12) { 
+13) 	public static void main(String[] args) 
+14) 	{ 
+15) 		ArrayList<Integer> l = new ArrayList<Integer>(); 
+16) 			l.add(10); 
+17) 			l.add(0); 
+18) 			l.add(15); 
+19) 			l.add(5); 
+20) 			l.add(20); 
+21) 		System.out.println("Before Sorting:"+l); 
+22) 		Collections.sort(l,new MyComparator()); 
+23) 		System.out.println("After Sorting:"+l); 
+24) 	} 
+25) } 
+
+Sorting with Lambda Expressions
+===============================
+As Comparator is Functional interface, we can replace its implementation with Lambda Expression
+Collections.sort(l,(I1,I2)->(I1<I2)?1:(I1>I2)?-1:0);
+
+Demo Program to Sort elements of ArrayList according to Customized Sorting Order By using 
+         Lambda Expressions(Descending Order):
+1) import java.util.ArrayList; 
+2) import java.util.Collections; 
+3) class Test 
+4) { 
+5) 	public static void main(String[] args) 
+6)      { 
+7) 		ArrayList<Integer> l= new ArrayList<Integer>(); 
+8) 			l.add(10); 
+9) 			l.add(0); 
+10) 			l.add(15); 
+11) 			l.add(5); 
+12) 			l.add(20); 
+13) 		System.out.println("Before Sorting:"+l); 
+14) 		Collections.sort(l,(I1,I2)->(I1<I2)?1:(I1>I2)?-1:0); 
+15) 		System.out.println("After Sorting:"+l); 
+16)      } 
+17) } 
+
+Output:
+Before Sorting:[10, 0, 15, 5, 20]
+After  Sorting:[20, 15, 10, 5, 0]
+
+
+2. Sorted Set
+In the case of Set, if we want Sorting order then we should go for TreeSet
+1. TreeSet t = new TreeSet(); 
+ 	This TreeSet object meant for default natural sorting order
+2. TreeSet t = new TreeSet(Comparator c);
+ 	This TreeSet object meant for Customized Sorting Order
+
+Demo Program for Default Natural Sorting Order(Ascending Order):
+1) import java.util.TreeSet; 
+2) class Test 
+3) { 
+4) 	public static void main(String[] args)
+5) 	{ 
+6) 		TreeSet<Integer> t = new TreeSet<Integer>(); 
+7) 			t.add(10); 
+8) 			t.add(0); 
+9) 			t.add(15); 
+10) 			t.add(5); 
+11) 			t.add(20); 
+12) 		System.out.println(t); 
+13) 	} 
+14) } 
+Output: [0, 5, 10, 15, 20]
+
+Demo Program for Customized Sorting Order(Descending Order):
+1) import java.util.TreeSet; 
+2) class Test 
+3) { 
+4) 	public static void main(String[] args) 
+5) 	{ 
+6) 		TreeSet<Integer> t = new TreeSet<Integer>((I1,I2)->(I1>I2)?-1:(I1<I2)?1:0); 
+7) 			t.add(10); 
+8) 			t.add(0); 
+9) 			t.add(15); 
+10) 			t.add(25); 
+11) 			t.add(5); 
+12) 			t.add(20); 
+13) 		System.out.println(t); 
+14) 	} 
+15) } 
+Output: [25, 20, 15, 10, 5, 0]
+
+3. Sorted Map:
+In the case of Map, if we want default natural sorting order of keys then we should go for TreeMap.
+1. TreeMap m = new TreeMap(); 
+ 	This TreeMap object meant for default natural sorting order of keys
+2. TreeMap t = new TreeMap(Comparator c);
+ 	This TreeMap object meant for Customized Sorting Order of keys
+
+Demo Program for Default Natural Sorting Order(Ascending Order):
+
+import java.util.*;
+
+public class Test {
+	public static void main(String[] args){
+		TreeMap<Integer,String> t =new TreeMap<Integer,String>();
+		t.put(10,"sachin");
+		t.put(14,"ponting");
+		t.put(18,"kohli");
+		t.put(9,"lara");
+		t.put(17,"ABD");
+		t.put(7,"dhoni");	
+		System.out.println(t);	
+   }
+}
+{7=dhoni, 9=lara, 10=sachin, 14=ponting, 17=ABD, 18=kohli}
+
+Demo Program for Customized Sorting Order(Descending Order):
+
+
+import java.util.*;
+
+public class Test {
+	public static void main(String[] args){
+	  TreeMap<Integer,String> t =new TreeMap<Integer,String>((I1,I2)->I1>I2?-1:I1<I2?+1:0);
+		t.put(10,"sachin");
+		t.put(14,"ponting");
+		t.put(18,"kohli");
+		t.put(9,"lara");
+		t.put(17,"ABD");
+		t.put(7,"dhoni");
+		
+		System.out.println("After sorting ::"+t);	
+   }
+}
+After sorting ::{18=kohli, 17=ABD, 14=ponting, 10=sachin, 9=lara, 7=dhoni}
+
+Sorting for Customized class objects by using Lambda Expressions
+================================================================
+
+without lambda Expression
+=========================
+
+import java.util.*;
+
+class Employee
+{
+	int eno;
+	String ename;
+
+	Employee(int eno,String ename){
+		this.eno=eno;
+		this.ename=ename;
+	}
+	public String toString(){
+		return eno+"==>"+ename;
+	}
+}
+class EmployeeComparator implements Comparator
+{
+	public int compare(Object obj1,Object obj2){
+		Employee e1=(Employee) obj1;
+		Employee e2=(Employee) obj2;
+
+		return e1.eno>e2.eno? -1 : e1.eno<e2.eno ? +1:0;
+	}
+}
+public class Test {
+	public static void main(String[] args){
+		ArrayList<Employee> al=new ArrayList<Employee>();
+		al.add(new Employee(10,"sachin"));
+		al.add(new Employee(14,"ponting"));
+		al.add(new Employee(7,"dhoni"));
+		al.add(new Employee(9,"lara"));
+		al.add(new Employee(18,"kohli"));
+		System.out.println("Before sorting :"+al);
+
+		Collections.sort(al,new EmployeeComparator());
+
+		System.out.println("After sorting :"+al);
+	
+   }
+}
+Before sorting :[10==>sachin, 14==>ponting, 7==>dhoni, 9==>lara, 18==>kohli]
+After sorting :[18==>kohli, 14==>ponting, 10==>sachin, 9==>lara, 7==>dhoni]
+
+
+With Lambda Expression
+======================
+import java.util.*;
+class Employee
+{
+	int eno;
+	String ename;
+
+	Employee(int eno,String ename){
+		this.eno=eno;
+		this.ename=ename;
+	}
+	public String toString(){
+		return eno+"==>"+ename;
+	}
+}
+public class Test {
+	public static void main(String[] args){
+
+		ArrayList<Employee> al=new ArrayList<Employee>();
+		al.add(new Employee(10,"sachin"));
+		al.add(new Employee(14,"ponting"));
+		al.add(new Employee(7,"dhoni"));
+		al.add(new Employee(9,"lara"));
+		al.add(new Employee(18,"kohli"));
+		System.out.println("Before sorting :"+al);
+
+		Collections.sort(al,(e1,e2)-> e1.eno>e2.eno?-1:e1.eno<e2.eno?+1:0);
+
+		System.out.println("After sorting :"+al);
+	
+   }
+}
+Before sorting :[10==>sachin, 14==>ponting, 7==>dhoni, 9==>lara, 18==>kohli]
+After sorting :[18==>kohli, 14==>ponting, 10==>sachin, 9==>lara, 7==>dhoni]

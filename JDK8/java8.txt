@@ -1,0 +1,107 @@
+Java 8 New Features:
+1) Lambda Expression
+2) Functional Interfaces
+3) Default methods
+4) Predicates
+5) Functions
+6) Double colon operator(::)
+	a. Method referecnce
+	b. Constructor reference
+7) Stream API
+8) Date and Time API(jodha API)
+
+
+Main Objective of Java8 is
+  1. To simplify the Programming.
+  2. To enable functional progamming in java.
+  3. To enable multi programming.
+  4. To use API's very easily and effectively.
+
+Lambda (λ) Expressions
+=>Lambda calculus is a big change in mathematical world which has been introduced in 1930. Becauseof     benefits of Lambda calculus slowly this concepts started using in programming world.
+  “LISP” is the first programming which uses Lambda Expression.
+=> The other languages which uses lambda expressions are: 
+ 1.C#.Net
+ 2.C Objective
+ 3.C
+ 4.C++
+ 5.Python
+ 6.Ruby etc.
+and finally in Java also.
+
+=> The Main Objective of Lambda Expression is to bring benefits of functional programming 
+   into  Java.
+
+What is Lambda Expression (λ):
+=> Lambda Expression is just an anonymous (nameless) function. That means the function which                doesn’t have the name, return type and access modifiers.
+=> Lambda Expression also known as anonymous functions or closures.
+Ex: 1
+public void m1() {
+ sop(“hello”);
+} 
+() -> {
+	 sop(“hello”);
+      }
+() -> { sop(“hello”); }
+() -> sop(“hello”)
+
+Ex:2
+public void add(inta, int b) {
+ sop(a+b); 
+}
+	(inta, int b) ->  sop(a+b)
+		(a,b) -> sop (a+b);
+ If the type of the parameter can be decided by compiler automatically based on the context then    we   can remove types also(type inference).
+=> The above Lambda expression we can rewrite as (a,b) -> sop (a+b);
+
+Ex: 3
+public String str(String str) {
+ return str.length(); 
+}
+(String str) -> return str;
+ (str) -> str.length()
+  str  -> str.length()
+
+
+Conclusions:
+1) A lambda expression can have zero or more number of parameters (arguments).
+Ex:
+() -> sop(“hello”);
+ s  -> s.length();
+( a, b) -> System.out.print(a+b);
+
+2) Usually we can specify type of parameter. If the compiler expects the type based on the context    then we can remove type. i.e., programmer is not required.
+Ex:
+ (int a, int b) -> sop(a+b);
+ (a,b) -> System.out.print(a+b);
+
+3) If multiple parameters present then these parameters should be separated with comma (,).
+
+4) If zero number of parameters available then we have to use empty parameter [ like ()].
+    Ex: () -> sop(“hello”);
+
+5) If only one parameter is available and if the compiler can expect the type then we can remove      the type and parenthesis also.
+Ex:
+(int a) -> sop(a);
+     (a)-> sop(a);
+(String str) -> return str.length();
+ (str) -> str.length();
+   str -> str.length();
+
+6) Similar to method body lambda expression body also can contain multiple statements. If more        than one statements present then we have to enclose inside within curly braces. 
+	()-> {
+		stmt-1;
+		stmt-2;
+		stmt-3;
+	     };
+	If one statement present then curly braces are optional.
+	  a-> System.out.print(a);
+
+7) Once we write lambda expression we can call that expression just like a method, for this              functional interfaces are required.
+
+
+
+
+
+
+

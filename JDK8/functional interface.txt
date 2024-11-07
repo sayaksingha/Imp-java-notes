@@ -1,0 +1,103 @@
+Functional Interfaces
+=====================
+If an interface contain only one abstract method, such type of interfaces are called functional interfaces and the method is called functional method or single abstract method (SAM).
+Ex:
+1) Runnable       -> It contains only run() method
+2) Comparable     -> It contains only compareTo() method
+3) ActionListener -> It contains only actionPerformed() method
+4) Callable       -> It contains only call() method
+
+Inside functional interface in addition to single Abstract method (SAM) we write any number of default and static methods.
+Ex:
+1) interface Interf { 
+2)	 public abstract void m1(); 
+3) 	 default void m2() { 
+4) 		System.out.println (“hello”); 
+5) 	 }	 
+6) }
+ 
+In Java 8, Sun Micro System introduced @Functional Interface annotation to specify that the interface is FunctionalInterface.
+Ex: 
+@Functional Interface
+interface Interf { This code compiles without any compilation errors.
+   public void m1();
+   default void m2(){
+
+   }
+   static void m3(){
+
+   }
+}
+
+
+Inside Functional Interface we can take only one abstract method, if we take more than one abstract method then compiler raise an error message that is called we will get compilation error.
+Ex:
+@Functional Interface 
+interface Interf{
+	public void m1(); //This code gives compilation error.
+	public void m2();
+}
+
+
+Inside Functional Interface we have to take exactly only one abstract method.If we are not declaring that abstract method then compiler gives an error message.
+Ex:
+@Functional Interface 
+ interface Interface //compilation error
+ { 
+ }
+
+Functional Interface with respect to Inheritance
+=================================================
+If an interface extends FunctionalInterface and child interface doesn’t contain any abstract method then child interface is also FunctionalInterface.
+
+case1:
+Ex:
+1) @FunctionalInterface 
+2) interface A { 
+3) 	public void methodOne(); 
+4) } 
+5) @FunctionalInterface 
+6) interface B extends A { 
+7) } 
+
+case2:
+In the child interface we can define exactly same parent interface abstract method.
+Ex:
+1) @FunctionalInterface 
+2) interface A { 
+3)     public void methodOne(); 
+4) } 
+5) @FunctionalInterface 
+6) interface B extends A { 
+7)    public void methodOne(); 
+8) } 
+
+
+case3:
+In the child interface we can’t define any new abstract methods otherwise child interface won’t be Functional Interface and if we are trying to use @Functional Interface annotation then compiler gives an error message.
+Ex:
+@FunctionalInterface
+interface A {
+ public void methodOne();
+} 
+@FunctionalInterface
+interface B extends A {
+  public void methodTwo(); 
+}
+
+
+case4:
+Ex:
+@FunctionalInterface
+interface A {
+ public void methodOne();
+} 
+interface B extends A {
+  public void methodTwo(); This’s Normal interface so that code compiles without error
+}
+
+Note:
+In the above example in both parent & child interface we can write any number of default methods and there are no restrictions. Restrictions are applicable only for abstract methods.
+
+
+

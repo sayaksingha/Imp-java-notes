@@ -1,0 +1,174 @@
+Predicates
+A predicate is a function with a single argument and returns boolean value.
+To implement predicate functions injava,oracle people introduced Predicate interface in 1.8 
+version(i.e.,Predicate<T>).
+Predicate interface present in java.util.function package.
+It’s a functional interface and it contains only one method i.e., test()
+Ex:
+interface Predicate<T> {
+ public boolean test(T t);
+}
+As predicate is a functional interface and hence it can refers lambda expression
+Ex:1
+Write a predicate to check whether the given integer is greater than 10 or not.
+
+Ex:
+public boolean test(Integer I) {
+ if (I >10) {
+ return true;
+ }
+ else {
+ return false;
+ }
+}
+(Integer I) ->  { if(I > 10)
+ return true;
+ else
+ return false;
+}
+I -> (I>10);
+predicate<Integer> p = I -> (I >10);
+System.out.println (p.test(100)); true
+System.out.println (p.test(7)); false
+
+
+# 1 Write a predicate to check the length of given string is greater than 3 or not.
+	 Predicate<String> p = s ->(s.length() > 3);
+ 	 System.out.println (p.test(“sachin”)); true
+ 	 System.out.println (p.test(“rcb”)); false
+
+
+Predicate joining
+=================
+It’s possible to join predicates into a single predicate by using the following methods.
+and()
+or()
+negate()
+these are exactly same as logical AND ,OR and complement operator
+		program : refer class notes
+
+import java.util.function.*;
+
+public class TestApp {
+	public static void main(String[] args) {
+		int[] arr= {0,5,10,15,20,25,30};
+		Predicate<Integer> p1 = i-> i>10;
+		System.out.println("The no which are greater than 10:  ");
+		m1(p1,arr);
+
+		System.out.println();
+
+		Predicate<Integer> p2 = i-> i%2==0;
+		System.out.println("The no which are even in the array are: ");
+		m1(p2,arr);
+
+		System.out.println();
+		System.out.println("The no which are not greater than 10:  ");
+		m1(p1.negate(),arr);
+
+		System.out.println();
+		System.out.println("The no which are  greater than 10 and are even :  ");
+		m1(p1.and(p2),arr);
+
+		System.out.println();
+		System.out.println("The no which are  greater than 10 or even :  ");
+		m1(p1.or(p2),arr);
+
+	}
+	private static void m1(Predicate<Integer> p,int[] arr){
+		for(int data:arr){
+			if (p.test(data)){
+				System.out.println(data);
+			}
+		}
+	}
+}
+
+These methods are virtual/defender methods present in JDK1.8 interface.
+
+Function
+========
+Functions are exactly same as predicates except that functions can return any type of result but 
+function should(can)return only one value and that value can be any type as per our requirement.
+To implement functions oracle people introduced Function interface in 1.8version.
+Function interface present in java.util.function package.
+
+Functional interface contains only one method i.e., apply()
+interface function(T,R) {
+ public R apply(T t);
+}
+
+program
+=======
+import java.util.function.*;
+public class TestApp {
+	public static void main(String[] args) {
+		Function<String,Integer> f=str-> str.length();
+		System.out.println(f.apply("sachin"));
+		System.out.println(f.apply("RCB"));
+		System.out.println(f.apply("AdvancedJava"));
+	}	
+}
+
+Note:
+Function is a functional interface and hence it can refer lambda expression.
+
+
+Differenece between predicate and function
+Predicate
+========= 
+To implement conditional checks We should go for predicate
+Predicate can take one typeParameter which representsInput argument type.
+Predicate<T>
+Predicate interface defines only one method called test()
+public boolean test(T t)
+Predicate can return only boolean value.
+
+Function
+========
+To perform certain operation And to return some result we Should go for function.
+Function can take 2 type Parameters.first one represent Input argument type and Second one 
+represent return Type. 
+Function<T,R>
+Function interface defines only one Method called apply().
+public R apply(T t)
+Function can return any type of value
+
+Note:
+Predicate is a boolean valued function 
+and(), or(), negate() are default methods present inside Predicate interface.
+
+Method and Constructor references by using ::(double colon)operator
+
+functionalInterface method can be mapped to our specified method by using 
+:: (double colon)operator. This is called method reference.
+
+Our specified method can be either static method or instance method.
+
+FunctionalInterface method and our specified method should have same argument types ,except this 
+the remaining things like returntype,methodname,modifiersetc are not required to match.
+
+Syntax
+if our specified method is static method
+Classname::methodName
+if the method is instance method
+Objref::methodName
+
+FunctionalInterface can refer lambda expression and FunctionalInterface can also refer method 
+reference . Hence lambda expression can be replaced with method reference.
+hence method reference is alternative syntax to lambda expression.
+
+Constructor reference: ClassName:: new
+	program : refer classnotes
+
+
+
+
+
+
+
+
+
+
+
+

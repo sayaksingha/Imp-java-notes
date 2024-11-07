@@ -1,0 +1,144 @@
+What are the advantages of Lambda expression?
+ => We can reduce length of the code so that readability of the code will be improved.
+ => We can resolve complexity of anonymous inner classes.
+ => We can provide Lambda expression in the place of object.
+ => We can pass lambda expression as argument to methods.
+Note:
+ => Anonymous inner class can extend concrete class, can extend abstract class,can implement 
+    interface with any number of methods but 
+ => Lambda expression can implement an interface with only single abstract  method   (FunctionalInterface).
+
+Hence if anonymous inner class implements functionalinterface in that particular case only we can 
+replace with lambda expressions.hence wherever anonymous inner class concept is there,it may 
+not possible to replace with Lambda expressions.
+ => Anonymous inner class! = Lambda Expression
+ => Inside anonymous inner class we can declare instance variables.
+ => Inside anonymous inner class “this” always refers current inner class object(anonymous inner 
+	class) but not related outer class object
+Ex:
+ => Inside lambda expression we can’t declare instance variables.
+ => Whatever the variables declare inside lambda expression are simply acts as local variables
+ => Within lambda expression ‘this” keyword represents current outer class object reference (that      is current enclosing class reference in which we declare lambda expression)
+
+
+
+Differences between anonymous inner classes and Lambda expression
+Anonymous Inner class 
+It’s a class without name
+Anonymous inner class can extend Abstract and concrete classes 
+Anonymous inner class can implement An interface that contains any number of Abstract methods
+Inside anonymous inner class we can Declare instance variables.
+Anonymous inner classes can be Instantiated.
+Inside anonymous inner class “this” Always refers current anonymous Inner class object but not outer class Object.
+Anonymous inner class is the best choice If we want to handle multiple methods.
+In the case of anonymous inner class At the time of compilation a separate Dot class file will be generated(outerclass$1.class)
+Memory allocated on demand Whenever we are creating an object
+
+Lambda Expression
+It’s a method without name(anonymous function)
+lambda expression can’t extend Abstract and concreate classes
+lambda expression can implement an Interface which contains single abstract method 
+(FunctionalInterface).
+Inside lambda expression we can’t Declare instance variables,whater the variables 
+declare are simply acts as local variables.
+lambda expressions can’t be instantiated
+Inside lambda expression “this” Always refers current outer class object.that is 
+enclosing class object.
+Lambda expression is the best Choice if we want to handle interface With single abstract method (FuntionalInterface).
+At the time of compilation no dot Class file will be generated for Lambda expression.it simply 
+convert in to private method outer class.
+Reside in permanent memory of JVM (Method Area).
+
+
+Default methods
+=> Until 1.7 version onwards inside interface we can take only public abstract methods and public 
+   static final variables(every method present inside interface is always public and abstract       whether we are declaring or not)
+
+=> Every variable declared inside interface is always public static final whether we are declaring    or not.
+=> But from 1.8 version onwards in addition to these, we can declare default concrete methods also 
+   inside interface,which are also known as defender methods.
+
+=> We can declare default method with the keyword “default” as follows
+   default void m1(){ 
+	System.out.println (“Default Method”); 
+   }
+
+Interface default methods are by-default available to all implementation classes.Based on 
+requirement implementation class can use these default methods directly or can override.
+
+Default methods also known as defender methods or virtual extension methods.
+The main advantage of default methods is without effecting implementation classes we can add new 
+functionality to the interface(backward compatibility).
+	program :refer class notes
+
+Note:
+We can’t override object class methods as default methods inside interface otherwise we get 
+compiletime error.
+	program : refer classnotes
+
+Reason: 
+object class methods are by-default available to every java class hence it’s not required to bring through default methods.
+
+Default method vs multiple inheritance
+Two interfaces can contain default method with same signature then there may be a chance of 
+ambiguity problem(diamond problem) to the implementation class.to overcome this problem 
+compulsory we should override default method in the implementation class otherwise we get 
+compiletime error.
+		program : refer classnotes
+
+
+Differences between interface with default methods and abstract class
+Interface with Default Methods 
+Eventhough we can add concrete methods in the form of default methods to the interface , it wont be equal to abstract class.
+Inside interface every variable is Always public static final and there is  No chance of instance variables.
+Interface never talks about state ofObject.
+Inside interface we can’t declare Constructors.Inside interface we can’t declare
+Instance and static blocks.
+Functional interface with default Methods Can refer lambda expression.
+Inside interface we can’t override Object class methods.
+
+
+Abstract Class
+Inside abstract class there may be a Chance of instance variables which Are required to the 
+child class.
+Abstract class can talk about state of Object.
+Inside abstract class we can declare Constructors.
+Inside abstract class we can declare Instance and static blocks.
+Abstract class can’t refer lambda Expressions.
+Inside abstract class we can override Object class methods.
+
+
+Static methods inside interface:
+From 1.8version onwards in addition to default methods we can write static methods also inside 
+interface to define utility functions.
+Interface static methods by-default not available to the implementation classes hence by using 
+implementation class reference we can’t call interface static 
+methods.we should call interface static methods by using interface name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

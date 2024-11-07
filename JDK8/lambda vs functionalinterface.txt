@@ -1,0 +1,223 @@
+Functional Interface Vs Lambda Expressions
+==========================================
+Once we write Lambda expressions to invoke it’s functionality, then Functional Interface is required. We can use Functional Interface reference to refer Lambda Expression.
+Where ever Functional Interface concept is applicable there we can use Lambda Expressions
+
+Ex:1 
+Without Lambda Expression
+=========================
+interface Interf { 
+	 public void methodOne();
+} 
+class Demo implements Interf { 
+   public void methodOne() { 
+        System.out.println(“method one execution”); 
+   }
+} 
+public class Test { 
+   public static void main(String[] args) { 
+        Interfi = new Demo(); 
+	 i.methodOne(); 
+   } 
+}
+
+Above code With Lambda expression
+=================================
+interface Interf { 
+	public void methodOne();
+}
+public class Test { 
+	public static void main(String[] args) { 
+		Interf i = () -> System.out.println(“MethodOne Execution”); 
+	        i.methodOne(); 
+        } 
+}
+
+
+EX2:
+Without Lambda Expression
+
+1) interface Interf { 
+2) 	public void sum(inta,int b); 
+3) } 
+4) class Demo implements Interf { 
+5) 	public void sum(inta,int b) { 
+6) 		System.out.println(“The sum:” +(a+b)); 
+7) 	} 
+8) } 
+9) public class Test { 
+10) 	public static void main(String[] args) { 
+11) 		Interfi = new Demo(); 
+12) 		i.sum(20,5); 
+13) } 
+14)}
+
+Above code With Lambda Expression
+1) interface Interf { 
+2) 	public void sum(inta, int b); 
+3) } 
+4) class Test { 
+5) 	public static void main(String[] args) { 
+6) 		Interf i = (a,b) -> System.out.println(“The Sum:” +(a+b)); 
+7) 		i.sum(5,10); 
+8) 	} 
+9) } 
+
+EX3:
+Without Lambda Expressions
+1) interface Interf { 
+2) 	publicint square(int x); 
+3) } 
+4) class Demo implements Interf { 
+5) 	public int square(int x) { 
+6) 		return x*x; 
+7) 	} 
+8) } 
+9) public class Test { 
+10) 	public static void main(String[] args) { 
+11) 	Interf i = new Demo(); 
+12) 	System.out.println(“The Square of 7 is: “ +i.square(7)); 
+13) } 
+14)} 
+
+Above code with Lambda Expression
+1) interface Interf { 
+2) 	public int square(int x); 
+3) } 
+4) public class Test { 
+5) 	public static void main(String[] args) {
+6) 		Interf i = x-> x*x; 
+7) 		System.out.println(“The Square of 5 is:”+i.square(5)); 
+8) 	} 
+9) } 
+
+EX4:
+Without lambda Expression
+interface Interf
+{
+	public int getLength(String s);
+}
+class Demo implements Interf
+{
+	public int getLength(String s){
+		return s.length();
+	}
+}
+public class Test {
+	public static void main(String[] args)throws InterruptedException{
+		Interf i= new Demo();
+		System.out.println(i.length("sachin"));
+		System.out.println(i.length("ABC"));
+   }
+}
+
+With lambda Expression
+
+interface Interf
+{
+	public int getLength(String s);
+}
+public class Test {
+	public static void main(String[] args)throws InterruptedException{
+		Interf i=s->s.length();
+		System.out.println(i.getLength("sachin"));
+		System.out.println(i.getLength("ABC"));
+	
+   }
+}
+
+EX5:
+Without Lambda expression
+
+1) class MyRunnable implements Runnable { 
+2) 	public void run() { 
+3) 		for(int i=0; i<10; i++) { 
+4) 			System.out.println(“Child Thread”); 
+5) 		} 
+6) 	} 
+7) } 
+8) public class ThreadDemo { 
+9) 	public static void main(String[] args) { 
+10) 		Runnable r = new myRunnable(); 
+11) 		Thread t = new Thread(r); 
+12) 		t.start(); 
+13) 		for(int i=0; i<10; i++) { 
+14) 			System.out.println(“Main Thread”) 
+15) 		} 
+16) } 
+17)} 
+
+With Lambda expression
+1) class ThreadDemo { 
+2) 	public static void main(String[] args) { 
+3) 	    Runnable r = ()->{ 
+4) 		for(int i=0; i<10; i++) { 
+5) 			System.out.println(“Child Thread”); 
+6) 		} 
+7) 	  }; 
+8) 	Thread t = new Thread(r); 
+9) 	t.start(); 
+10) 	for(i=0; i<10; i++) { 
+11) 		System.out.println(“Main Thread”); 
+12) 	} 
+13) } 
+14)} 
+
+Key Points about FunctionalInterface
+====================================
+  1. It should contain only one abstract methods(SAM)
+  2. It can contain any number of default and static methods
+  3. It acts as a type for lambda expression
+	eg: Interf i=()-> System.out.print("sachin");
+		here Interf i is called type.
+  4. It can be used to invoke lambda expression
+	  i.m1();
+
+
+Case1: Why Functional Interface should contain only one abstract methods?
+	 interface Interf{
+		 public void m1(int i);
+	 }
+	 Interf x=i->System.out.println(i*i);//compiler is binding it to m1(int i) method, becoz
+	                                       of this reason only one method should be a part of
+						interface type.
+
+	interface Interf{
+		public void m1(int i);
+		public void m2(int i);
+	}
+	Interf x=i->System.out.println(i*i);//CompileTimeError: because compiler is confused.
+
+Case2: What is the advantage of @FunctionalInterface Annotation?
+       => To specify explicitly that this interface is used for Lambda Expression,we need to use
+	  @FunctionalInterface.
+
+@FunctionalInterface
+interface Interf{
+	public void m1();
+}
+
+Interf i=()-> S.o.p("hiee");
+Interf i=()-> S.o.p("hello");
+Interf i=()-> S.o.p("byee");
+
+
+
+
+ 
+
+
+
+
+	          
+
+
+
+
+
+	
+
+
+
+
+

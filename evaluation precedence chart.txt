@@ -1,0 +1,10 @@
+unary operator::[],++x,--x,~,!,new,<type>(Left to Right)
+                x++,x--(Right to Left)
+Arithmetic operator:: *,/,%,+,-
+Shift operator:: >>,>>>,<<
+Comparison operator:: <,<=,>,>=,instanceof
+Equality operator:: ==,!=
+Bitwise operator:: &,^,|
+shortcircuit operator:: &&,||
+Conditional operator:: ?:(Right to left)
+Assignement operator::+=,-=,*=,/=,%=,....(Right to Left)
